@@ -1,6 +1,7 @@
 .pytest_cache/
 __pycache__/
-artifacts/
+artifacts/*.json
+artifacts/*.npz
 validation/
 .bantam/
 native/build/
