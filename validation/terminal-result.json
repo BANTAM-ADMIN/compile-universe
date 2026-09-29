@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "scenes": [
+    {
+      "name": "VFTS 352",
+      "frameMs": 8.56523500000003,
+      "localCells": 777
+    },
+    {
+      "name": "Betelgeuse",
+      "frameMs": 21.608807999999954,
+      "localCells": 5040
+    },
+    {
+      "name": "Crab Nebula",
+      "frameMs": 4.967823999999837,
+      "localCells": 1455
+    },
+    {
+      "name": "Orion Nebula",
+      "frameMs": 9.22383200000013,
+      "localCells": 1572
+    },
+    {
+      "name": "Crab Pulsar",
+      "frameMs": 10.944451000000072,
+      "localCells": 5543
+    },
+    {
+      "name": "3C 273",
+      "frameMs": 3.2099960000000465,
+      "localCells": 595
+    },
+    {
+      "name": "Sagittarius A*",
+      "frameMs": 11.332445000000007,
+      "localCells": 1492
+    }
+  ],
+  "maps": [
+    {
+      "cols": 120,
+      "rows": 42,
+      "orbits": 8
+    },
+    {
+      "cols": 60,
+      "rows": 40,
+      "orbits": 8
+    },
+    {
+      "cols": 80,
+      "rows": 24,
+      "orbits": 8
+    }
+  ],
+  "exactSharedRenderer": true,
+  "generatedWorld": "Sirius I",
+  "tourStops": 19,
+  "inputAndDeltaOutput": true
+}

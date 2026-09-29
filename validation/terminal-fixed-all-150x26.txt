@@ -1,0 +1,26 @@
+ + COMPILE UNIVERSE                                                                                                     [find /] [? help] [quit q]    
+                                                .                                                                                                     
+ Sun / ALL BODIES                                                                                                                      [close / esc]  
+ Fixed positions / click a world to fly                                                                                     1.00x   [-] [+] [fit 0]   
+                                             ..                                                                                                       
+                                            ..                         --------                                       Sun                             
+                                                                     //        -\                                                                     
+                                           .                        /    /----[Saturn]                                SYSTEM CENTER                   
+                                           .                      [Earth]    \\   o                                                                   
+                                                                   |   o |ooo[Sun]||[Eris]                            @ selected / o world            
+                                                                   |   o \-@o|||  ||                                                                  
+                                         .                       [Neptune]o o/[Uranus]                                Enter or click to fly           
+                                                                    \\   ----/   //                                   Inner view: close orbits        
+                                                                     \--    [Pluto]                                                                   
+                                                                        --------                                                                      
+                                                                                                                                                      
+                                                                                                                                                      
+ +- SYSTEM / CLICK TO FLY --------------------------------------------------------------------------------------------------------------------------+ 
+ | [planets] [inner] [all] [moons <] [moons >] [find /]                                                                                             | 
+ |                                                                                                                                                  | 
+ | > [Sun]                       [Mercury]                   [Venus]                     [Earth]                     [Mars]                         | 
+ |   [Jupiter]                   [Saturn]                    [Uranus]                    [Neptune]                   [Pluto]                        | 
+ | 1-10/22  arrows: select / Enter: fly                                                                                               [<] [>]       | 
+ +--------------------------------------------------------------------------------------------------------------------------------------------------+ 
+                              .                                                                                                                       
+ wheel +/-: zoom / 0: fit / arrows: select / Enter: fly / Esc: return                                                                   0 fps MAP     

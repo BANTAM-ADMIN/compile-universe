@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#030305">
+<title>Sagittarius A* — Compile Universe</title>
+<style>
+:root{color-scheme:dark;--ink:#f3eee7;--muted:#98979d;--dim:#62626d;--gold:#e9c89e;--violet:#b8add6;--line:#ffffff18;--panel:#101014f5;--mono:ui-monospace,"Cascadia Code","SFMono-Regular",Consolas,"Liberation Mono",monospace;--sans:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden}body{background:#030305;color:var(--ink);font-family:var(--sans);font-size:13px;-webkit-font-smoothing:antialiased}button,select,input{font:inherit}button,select{color:inherit}button{cursor:pointer;border:0}button:focus-visible,select:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--gold);outline-offset:5px}button:disabled{opacity:.4;cursor:wait}button,select,input{touch-action:manipulation}button svg{width:17px;height:17px;stroke:currentColor;stroke-width:1.5;fill:none;stroke-linecap:round;stroke-linejoin:round;display:block}button[aria-pressed=true]{color:var(--gold)}.sr-only{position:absolute;width:1px;height:1px;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}.hidden,[hidden]{display:none!important}
+.observatory{position:relative;isolation:isolate;width:100%;height:100%;height:100dvh;min-height:400px;background:#030305}.stage{position:absolute;inset:0;display:flex;justify-content:center;align-items:center;overflow:hidden;touch-action:none;cursor:grab;user-select:none;background:#030305}.stage.dragging{cursor:grabbing}#glyphscreen{position:absolute;inset:0;width:100%;height:100%;display:block}#screen{flex:none;white-space:pre;padding:0;margin:0;font-family:var(--mono);font-weight:400;font-size:10px;line-height:1.8ch;letter-spacing:0;font-variant-ligatures:none;text-rendering:geometricPrecision;color:var(--gold);background:#000}#screen span{border:0;padding:0;margin:0}#screen .text-row{display:block;width:100%;height:1.8ch;contain:layout style paint;overflow:hidden}.stage-shade{position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,#030305b0 0%,transparent 18%,transparent 70%,#030305e8 100%)}
+.header{position:absolute;z-index:2;left:0;right:0;top:0;padding:28px 36px;display:flex;justify-content:space-between;align-items:center;gap:24px;pointer-events:none}.header>*{pointer-events:auto}.wordmark{text-decoration:none;color:var(--ink);font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.19em;display:flex;align-items:center;gap:13px}.mark{width:23px;height:23px;display:grid;place-items:center;border:1px solid #a69c8c80;border-radius:50%;font-size:13px;color:var(--gold);letter-spacing:0}.wordmark small{display:block;font-size:8px;font-weight:400;letter-spacing:.22em;color:var(--muted);margin-top:4px}.header-center{position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:8px;align-items:center;font-family:var(--mono);font-size:9px;letter-spacing:.18em;color:#ccc3b6}.live-dot{width:4px;height:4px;border-radius:50%;background:var(--gold);box-shadow:0 0 8px #e9c89e40}.header-tools{display:flex;align-items:center;gap:9px}.scene-select{background:#08080b70;border:1px solid #ffffff15;border-radius:6px;color:#d8d3cf;font-size:11px;padding:9px 25px 9px 11px;max-width:190px}.icon-button{width:35px;height:35px;background:transparent;border:1px solid transparent;border-radius:6px;display:grid;place-items:center;color:#c6c1bd}.icon-button:hover{border-color:#ffffff20;background:#ffffff06;color:white}.icon-button[aria-expanded=true]{border-color:#e9c89e45;background:#e9c89e0c;color:var(--gold)}
+.identity{position:absolute;left:36px;bottom:134px;pointer-events:none;max-width:390px}.eyebrow{font-family:var(--mono);font-size:9px;font-weight:400;letter-spacing:.21em;color:var(--gold);margin:0 0 13px}.identity h1{font-family:Georgia,"Times New Roman",serif;font-size:clamp(32px,3.3vw,52px);line-height:1.1;letter-spacing:-.045em;font-weight:400;margin:0 0 12px}.identity .description{font-size:11px;letter-spacing:.02em;line-height:1.7;color:#a9a5a4;margin:0}.identity .description span{color:#d4cac0}.scene-index{position:absolute;right:38px;bottom:149px;text-align:right;pointer-events:none;color:#aaa1a1;font-family:var(--mono);font-size:9px;line-height:1.9;letter-spacing:.07em}.scene-index strong{font-family:Georgia,"Times New Roman",serif;font-size:36px;letter-spacing:-.04em;font-weight:400;color:#e2d5c8;display:block}.scene-index small{font-size:8px;color:#908792;letter-spacing:.16em}
+.control-area{position:absolute;left:30px;right:30px;bottom:24px;display:flex;flex-direction:column;gap:17px;align-items:center;z-index:3;pointer-events:none}.control-area>*{pointer-events:auto}.rail{display:flex;align-items:center;gap:4px;padding:6px;border:1px solid #ffffff21;background:#111114ef;box-shadow:0 14px 60px #0005;border-radius:11px;max-width:100%;overflow-x:auto;scrollbar-width:none}.rail::-webkit-scrollbar{display:none}.preset{padding:10px 15px;border-radius:6px;font-size:11px;font-weight:450;white-space:nowrap;background:transparent;color:#a4a0a4;transition:background .15s,color .15s}.preset:hover{background:#ffffff08;color:#ece5db}.preset[aria-pressed=true]{background:#dfbf9420;box-shadow:inset 0 0 0 1px #dfbf9428;color:#efd6b4}.rail-divider{width:1px;height:21px;background:#ffffff16;flex:none;margin:0 6px}.transport{display:flex;align-items:center;gap:7px;background:transparent;color:#a7a3ab;padding:9px 11px;white-space:nowrap;border-radius:6px;font-size:11px}.transport:hover{background:#ffffff08;color:white}.transport[aria-pressed=true]{color:#c8bae5;background:#b6a4df0d}.transport svg{width:14px;height:14px}.play-button{width:35px;flex:none;height:34px}.footer-line{display:flex;justify-content:space-between;align-items:center;width:100%;font-family:var(--mono);font-size:8px;letter-spacing:.025em;gap:15px;color:#8b878d}.footer-line .hint{color:#989097}.footer-line .right{display:flex;gap:22px;align-items:center}.footer-line .accent{color:#c6b7d8}.time-readout{min-width:45px;font-variant-numeric:tabular-nums;color:#c1b9b3}.text-badge{color:#ad9b83;letter-spacing:.15em}.keycap{font:inherit;color:#b9b1b2;border:1px solid #ffffff20;border-radius:3px;padding:1px 3px}
+.loading{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);text-align:center;pointer-events:none;z-index:1}.loading-symbol{font-family:Georgia,serif;font-size:62px;color:#b9a085;line-height:1;margin-bottom:21px}.loading p{font-family:var(--mono);font-size:10px;letter-spacing:.17em;color:#ad9f94;margin:0}.loading small{display:block;color:#676371;font-size:10px;margin-top:11px;letter-spacing:.01em}.error{position:absolute;top:92px;left:50%;transform:translateX(-50%);max-width:min(590px,calc(100% - 32px));padding:12px 14px;border:1px solid #bc855c55;border-radius:7px;background:#191311f5;color:#ddbd9f;display:flex;align-items:center;gap:16px;font-size:11px;z-index:10;box-shadow:0 12px 40px #0008}.error button{background:#e9c89e15;border:1px solid #e9c89e25;padding:6px 9px;border-radius:4px;color:#e9c89e;white-space:nowrap}
+.drawer{position:absolute;z-index:6;right:30px;top:85px;bottom:132px;width:330px;max-height:710px;overflow-y:auto;padding:24px;background:var(--panel);border:1px solid #ffffff23;border-radius:10px;box-shadow:0 16px 80px #0009;scrollbar-color:#45414b transparent;scrollbar-width:thin}.drawer-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:22px}.drawer h2{margin:0;font-size:15px;font-weight:450;letter-spacing:-.02em}.drawer h3{font-size:9px;font-family:var(--mono);font-weight:400;letter-spacing:.13em;color:#9e94ad;margin:22px 0 13px;text-transform:uppercase}.drawer p{font-size:11px;color:#a29ba5;line-height:1.8;margin:10px 0}.drawer strong{color:#d1c4b5;font-weight:400}.drawer hr{border:0;border-top:1px solid #ffffff10;margin:21px 0}.setting{display:block;margin:0 0 18px}.setting-label{display:flex;justify-content:space-between;align-items:center;color:#c2b9c2;font-size:11px;margin-bottom:10px}.setting-value{color:var(--gold);font-family:var(--mono);font-size:10px;font-variant-numeric:tabular-nums}.setting input[type=range]{width:100%;height:3px;accent-color:var(--gold);cursor:pointer;margin:7px 0 6px;display:block}.setting select{background:#17161c;border:1px solid #ffffff20;border-radius:5px;padding:9px 10px;width:100%;font-size:11px;color:#c7c0c9}.check-setting{display:flex;align-items:center;justify-content:space-between;font-size:11px;color:#c2b9c2;margin:16px 0;cursor:pointer}.check-setting input{accent-color:var(--gold);width:14px;height:14px}.telemetry{display:grid;grid-template-columns:1fr 1fr;gap:13px 14px;margin-top:13px}.metric-label{display:block;color:#8e8795;font-size:9px;margin-bottom:4px}.metric-value{font-family:var(--mono);font-size:12px;color:#d0c3d8;font-variant-numeric:tabular-nums}.help-grid{display:grid;grid-template-columns:auto 1fr;gap:9px 18px;font-size:10px;line-height:1.6;color:#a49ba9}.help-grid kbd{font-family:var(--mono);color:#e0cfbb;font-size:9px}.footnote{font-size:9px!important;line-height:1.8!important;color:#797280!important}.reset-button{display:block;width:100%;background:#e9c89e0c;border:1px solid #e9c89e2a;color:#d7b996;font-size:11px;border-radius:5px;padding:9px;margin-top:19px}#font-measure{position:absolute;left:-10000px;top:0;font-family:var(--mono);font-size:100px;white-space:pre;visibility:hidden}
+@media(max-width:1050px){.header{padding:24px}.header-center{display:none}.identity{left:25px;bottom:130px}.identity h1{font-size:37px}.scene-index{right:26px;bottom:146px}.control-area{left:24px;right:24px;bottom:21px}.preset{padding:10px 12px}.rail{gap:2px}.drawer{right:24px}.footer-line .right{gap:14px}}
+@media(max-width:700px){.header{padding:19px 18px;gap:12px}.wordmark{font-size:9px;letter-spacing:.14em;gap:9px}.wordmark small{font-size:7px;letter-spacing:.16em}.mark{width:20px;height:20px;font-size:11px}.header-tools{gap:3px}.scene-select{max-width:123px;font-size:9px;padding:8px 15px 8px 8px}.icon-button{width:31px;height:31px}.fullscreen-top{display:none}.identity{left:20px;bottom:139px;max-width:275px}.eyebrow{font-size:8px;letter-spacing:.17em;margin-bottom:10px}.identity h1{font-size:35px;margin-bottom:9px}.identity .description{font-size:10px}.scene-index{right:20px;bottom:151px;font-size:8px}.scene-index strong{font-size:28px}.scene-index small{font-size:7px}.control-area{left:14px;right:14px;bottom:max(18px,env(safe-area-inset-bottom));gap:15px}.rail{padding:5px;border-radius:9px;gap:1px}.preset{font-size:10px;padding:10px 9px}.rail-divider{margin:0 3px}.transport{padding:9px 8px;font-size:10px;gap:5px}.transport-label{display:none}.play-button{width:30px}.footer-line{font-size:7px}.footer-line .right{gap:10px}.footer-line .hint{max-width:170px;line-height:1.7}.footer-line .compiled{display:none}.drawer{left:14px;right:14px;top:74px;bottom:116px;width:auto;max-width:390px;margin-left:auto;padding:21px}.error{top:77px;font-size:10px}.loading{top:43%}.stage-shade{background:linear-gradient(180deg,#030305c0 0%,transparent 19%,transparent 62%,#030305f5 100%)} }
+@media(max-width:420px){.wordmark{font-size:8px;gap:7px}.wordmark small{font-size:6px}.scene-select{max-width:112px}.identity{bottom:143px}.identity h1{font-size:31px}.scene-index{bottom:155px}.scene-index strong{font-size:25px}.preset{font-size:9px;padding:10px 8px}.rail-divider{margin:0 2px}.rail{gap:0}.transport{padding:9px 6px}.play-button{width:27px}}
+@media(max-height:620px) and (min-width:701px){.header{padding:18px 24px}.identity{bottom:110px}.identity h1{font-size:32px}.identity .description{display:none}.scene-index{bottom:120px}.scene-index strong{font-size:28px}.control-area{bottom:15px;gap:11px}.drawer{top:67px;bottom:103px}.eyebrow{margin-bottom:8px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<main class="observatory" id="observatory">
+  <div class="stage" id="viewport" role="region" tabindex="0" aria-label="Interactive text view of Sagittarius A star. Drag to orbit and use the mouse wheel to approach.">
+    <canvas id="glyphscreen" aria-label="A live display of computed character cells"></canvas>
+    <pre id="screen" aria-label="Live universe character grid" hidden></pre>
+  </div>
+  <div class="stage-shade" aria-hidden="true"></div>
+  <header class="header">
+    <div class="wordmark"><span class="mark" aria-hidden="true">∗</span><span>COMPILE UNIVERSE<small>AN OBSERVATORY IN TEXT</small></span></div>
+    <div class="header-center"><span class="live-dot" aria-hidden="true"></span><span id="live-label">LIVE TEXT</span></div>
+    <div class="header-tools">
+      <label class="sr-only" for="scene">Choose scene</label>
+      <select id="scene" class="scene-select"><option value="blackhole">Sagittarius A*</option><option value="atlas">Measured star atlas ↗</option><option value="lab">Visibility lab</option></select>
+      <button id="fullscreen" class="icon-button fullscreen-top" type="button" aria-label="Enter fullscreen" title="Fullscreen (F)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5"/></svg></button>
+      <button id="settings" class="icon-button" type="button" aria-label="Open observatory controls and information" aria-expanded="false" aria-controls="drawer" title="Controls and information (?)"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 17h16M8 4v6M16 14v6"/></svg></button>
+    </div>
+  </header>
+  <div class="loading" id="loading"><div class="loading-symbol" aria-hidden="true">◌</div><p>GATHERING THE LIGHT</p><small>The observatory is coming into focus.</small></div>
+  <div class="error" id="error" role="status" aria-live="polite" hidden><span id="error-message"></span><button type="button" id="retry">Retry</button></div>
+  <section class="identity" aria-label="Current object">
+    <p class="eyebrow" id="object-label">01 / THE GALACTIC CENTER</p>
+    <h1 id="object-title">Sagittarius A*</h1>
+    <p class="description" id="object-description">A black hole. A bent sky.<br><span>An artistic accretion disk, written in light.</span></p>
+  </section>
+  <div class="scene-index" aria-hidden="true"><strong id="radius-readout">60.1</strong><span id="radius-unit">SCHWARZSCHILD RADII</span><br><small id="mode-readout">ORBITAL OBSERVATION</small></div>
+  <div class="control-area">
+    <nav class="rail" aria-label="View presets and playback">
+      <button class="preset" id="preset-horizon" data-preset="horizon" aria-pressed="true">Horizon</button>
+      <button class="preset" id="preset-above" data-preset="above" aria-pressed="false">Above disk</button>
+      <button class="preset" id="preset-ring" data-preset="ring" aria-pressed="false">Photon ring</button>
+      <button class="preset" id="preset-free" data-preset="free" aria-pressed="false">Free flight</button>
+      <span class="rail-divider" aria-hidden="true"></span>
+      <button class="transport" id="cinematic" type="button" aria-pressed="false" title="Cinematic orbit (C)"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="5" transform="rotate(-35 12 12)"/><path d="M12 9v6M9 12h6"/></svg><span class="transport-label">Drift</span></button>
+      <button class="transport play-button" id="pause" type="button" aria-pressed="false" aria-label="Pause time" title="Pause time (Space)"><svg id="pause-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14"/></svg></button>
+    </nav>
+    <div class="footer-line"><span class="hint" id="navigation-hint">DRAG TO ORBIT &nbsp;·&nbsp; SCROLL TO APPROACH</span><span class="right"><span class="compiled text-badge">COMPILED LIGHT</span><span class="accent" id="grid-readout">220 × 94</span><span class="time-readout" id="time-readout">00:00</span><span title="Keyboard help"><span class="keycap">?</span> HELP</span></span></div>
+  </div>
+  <aside class="drawer" id="drawer" aria-label="Observatory controls and information" hidden>
+    <div class="drawer-top"><h2>The observatory</h2><button id="close-drawer" class="icon-button" type="button" aria-label="Close controls"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+    <label class="setting" for="exposure"><span class="setting-label">Exposure <output id="exposure-value" class="setting-value" for="exposure">1.00×</output></span><input id="exposure" type="range" min="0.4" max="2.5" step="0.05" value="1"></label>
+    <label class="setting" for="resolution"><span class="setting-label">Text density</span><select id="resolution"><option value="adaptive">Adaptive · fill the viewport</option><option value="160,70">Intimate · 160 × 70</option><option value="220,94" selected>Detailed · 220 × 94</option><option value="280,118">Fine · 280 × 118</option></select></label>
+    <label class="setting" for="display-mode"><span class="setting-label">Character display</span><select id="display-mode"><option value="accelerated">Accelerated glyphs · smooth</option><option value="text">Selectable text · 15 fps</option></select></label>
+    <label class="setting" for="palette"><span class="setting-label">Light palette</span><select id="palette"><option value="ember">Ember · warm gold</option><option value="ice">Ice · cool violet</option></select></label>
+    <label class="check-setting">Luminous atmosphere<input id="bloom" type="checkbox" checked></label>
+    <label class="check-setting" id="planet-setting" hidden>Oversized test planet<input id="planet" type="checkbox" checked></label>
+    <hr>
+    <h3>Moving through the scene</h3>
+    <div class="help-grid"><kbd>Drag / arrows</kbd><span>Orbit the black hole</span><kbd>Scroll / pinch</kbd><span>Approach or retreat</span><kbd>1 · 2 · 3</kbd><span>Horizon · above · ring</span><kbd>C</kbd><span>Cinematic drift</span><kbd>Space</kbd><span>Pause the passage of time</span><kbd>W A S D</kbd><span>Move in free flight</span><kbd>R / V · Shift</kbd><span>Rise / descend · move faster</span><kbd>F · ? · Esc</kbd><span>Fullscreen · help · close</span></div>
+    <button class="reset-button" id="reset" type="button">Return to the horizon</button>
+    <button class="reset-button" id="save-text" type="button">Save text snapshot</button><button class="reset-button" id="save-ansi" type="button">Save colored ANSI snapshot</button>
+    <hr>
+    <h3 id="science-heading">A compiled view of bent light</h3>
+    <p id="scene-explanation">Schwarzschild light paths. Illustrative disk and distant sky. This is an artistic interpretation, not an observation of the real Sagittarius A*.</p>
+    <div class="telemetry" aria-label="Experiment measurements"><div><span class="metric-label" id="compute-label">Local compute</span><span class="metric-value" id="frame-time">—</span></div><div><span class="metric-label" id="lookup-label">Appearance lookup</span><span class="metric-value" id="lookup-time">—</span></div><div><span class="metric-label" id="count-label">Disk cells</span><span class="metric-value" id="cell-count">—</span></div><div><span class="metric-label" id="asset-label">Compiled asset</span><span class="metric-value" id="asset-size">—</span></div></div>
+    <p class="footnote" id="backend-note">Compiled locally. Character display accelerated.<br>The scene is evaluated directly into characters.</p>
+  </aside>
+</main>
+<span id="font-measure" aria-hidden="true">MMMMMMMMMM</span>
+<script type="module">
+(() => {
+'use strict';
+const $=id=>document.getElementById(id);
+const viewport=$('viewport'), screen=$('screen');
+const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const mobile=window.matchMedia('(max-width: 700px)').matches;
+const initialRadius=Math.hypot(3.6,60), initialElevation=Math.atan2(3.6,60);
+const state={scene:'blackhole',position:[0,3.6,60],yaw:Math.PI,pitch:-initialElevation,fov:22,time:0,cols:mobile?160:220,rows:mobile?70:94,exposure:1,bloom:true,palette:'ember',planet:true};
+const keys=new Set(), pointers=new Map();
+let orbit={radius:initialRadius,azimuth:0,elevation:initialElevation};
+let freeFlight=false, cinematic=false, paused=false, pending=false, nextRequest=0, lastRequestStarted=-Infinity;
+let previousTick=performance.now(), generation=0, lastData=null, drawnCols=state.cols,drawnRows=state.rows;
+let selectedPreset='horizon', pinchDistance=0, lastFrameVisible=0, textRows=[], lastDrawMs=0;
+let adaptiveDensity=true, adaptiveQuality=1, lastQualityChange=0, computeAverage=0;
+let worker=null, workerReady=false, workerTicket=null, nextTicket=0, workerInitialized=false;
+let lastSentSignature='', lastCellFrame=null, lastTelemetryAt=0;
+let glyphDisplay=null, displayMode='accelerated', localInitialization=null;
+let acceptedInputAt=0, inputSerial=0, drawnInputSerial=0, previousDisplayAt=0;
+const metrics={frames:0,computeMs:0,displayMs:0,workerRoundtripMs:0,requestCount:0,frameIntervals:[],inputLatencyMs:[],computeTimes:[],displayTimes:[],workerRoundtrips:[]};
+function recordInput(){acceptedInputAt=performance.now();inputSerial++;}
+function observeMetric(array,value){array.push(value);if(array.length>240)array.shift();}
+
+const movementKeys=new Set(['KeyW','KeyA','KeyS','KeyD','KeyR','KeyV','ArrowLeft','ArrowRight','ArrowUp','ArrowDown','ShiftLeft','ShiftRight']);
+const num=new Intl.NumberFormat('en-US'), colorPattern=/^#?[\da-f]{6}$/i;
+$('resolution').value=adaptiveDensity?'adaptive':`${state.cols},${state.rows}`;
+function invalidate(){generation++;nextRequest=0;lastSentSignature='';}
+function adaptiveGrid(){if(!adaptiveDensity)return;const aspect=viewport.clientWidth/Math.max(1,viewport.clientHeight);const columns=Math.max(32,Math.min(280,Math.round(Math.min(220,120*aspect*1.8)*adaptiveQuality)));const rows=Math.max(8,Math.min(120,Math.round(columns/(aspect*1.8))));if(columns!==state.cols||rows!==state.rows){state.cols=columns;state.rows=rows;invalidate();}}
+function fitText(){const ratio=$('font-measure').getBoundingClientRect().width/1000;const w=viewport.clientWidth,h=viewport.clientHeight;const size=Math.min(w/(drawnCols*ratio),h/(drawnRows*ratio*1.8));screen.style.fontSize=Math.max(1,size).toFixed(3)+'px';screen.style.width=drawnCols+'ch';screen.style.height=(drawnRows*1.8)+'ch';}
+function syncOrbit(){const ce=Math.cos(orbit.elevation);state.position=[orbit.radius*Math.sin(orbit.azimuth)*ce,orbit.radius*Math.sin(orbit.elevation),orbit.radius*Math.cos(orbit.azimuth)*ce];state.yaw=orbit.azimuth+Math.PI;state.pitch=-orbit.elevation;}
+function orbitFromCamera(){orbit.radius=Math.max(6,Math.min(120,Math.hypot(...state.position)));orbit.azimuth=Math.atan2(state.position[0],state.position[2]);orbit.elevation=Math.max(-1.3,Math.min(1.3,Math.asin(Math.max(-1,Math.min(1,state.position[1]/Math.max(.001,Math.hypot(...state.position)))))));}
+function selectPreset(name){if(selectedPreset===name)return;selectedPreset=name;document.querySelectorAll('[data-preset]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.preset===name)));}
+function setCinematic(value){const next=Boolean(value)&&state.scene==='blackhole';if(next===cinematic)return;recordInput();cinematic=next;if(cinematic&&freeFlight){freeFlight=false;orbitFromCamera();syncOrbit();selectPreset('');} $('cinematic').setAttribute('aria-pressed',String(cinematic));updateLabels();}
+function setPaused(value){recordInput();paused=Boolean(value);$('pause').setAttribute('aria-pressed',String(paused));$('pause').setAttribute('aria-label',paused?'Resume time':'Pause time');$('pause').title=paused?'Resume time (Space)':'Pause time (Space)';$('pause-icon').replaceChildren();const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',paused?'m8 5 11 7-11 7Z':'M8 5v14M16 5v14');$('pause-icon').append(path);$('live-label').textContent=paused?'TIME PAUSED · VIEW LIVE':'LIVE TEXT';invalidate();}
+function updateLabels(){const lab=state.scene==='lab';$('navigation-hint').textContent=freeFlight?'W A S D TO FLY · DRAG TO LOOK':lab?'DRAG TO LOOK · W A S D TO MOVE':'DRAG TO ORBIT · SCROLL TO APPROACH';$('mode-readout').textContent=lab?'SPARSE VISIBILITY EXPERIMENT':freeFlight?'FREE FLIGHT':cinematic?'CINEMATIC DRIFT':'ORBITAL OBSERVATION';$('radius-unit').textContent=lab?'VISIBLE CATALOG STARS':'SCHWARZSCHILD RADII';viewport.setAttribute('aria-label',lab?'Interactive star visibility text view. Drag to look around and use W A S D to move.':freeFlight?'Interactive black hole text view. Drag to look around and use W A S D to fly.':'Interactive black hole text view. Drag to orbit and scroll to approach.');}
+function setPreset(name){
+  recordInput();
+  if(state.scene!=='blackhole')setScene('blackhole');
+  keys.clear();setCinematic(false);
+  if(name==='free'){freeFlight=true;selectPreset('free');}
+  else{freeFlight=false;if(name==='above'){orbit={radius:22,azimuth:.35,elevation:.8};state.fov=60;}else if(name==='ring'){orbit={radius:60,azimuth:0,elevation:.025};state.fov=18;}else{name='horizon';orbit={radius:60,azimuth:0,elevation:.06};state.fov=22;}syncOrbit();selectPreset(name);}
+  updateLabels();invalidate();
+}
+function setScene(name){
+  if(name==='atlas'){location.href='/';return;}
+  recordInput();
+  state.scene=name==='lab'?'lab':'blackhole';$('scene').value=state.scene;setCinematic(false);keys.clear();state.time=0;state.fov=state.scene==='lab'?55:22;
+  const lab=state.scene==='lab';freeFlight=lab;
+  if(lab){state.position=[0,0,0];state.yaw=0;state.pitch=0;selectPreset('');}else{orbit={radius:initialRadius,azimuth:0,elevation:initialElevation};syncOrbit();selectPreset('horizon');}
+  $('object-title').textContent=lab?'A sparse universe':'Sagittarius A*';$('object-label').textContent=lab?'02 / THE VISIBILITY LAB':'01 / THE GALACTIC CENTER';
+  $('object-description').replaceChildren();$('object-description').append(document.createTextNode(lab?'1,982 catalog stars. One moving occluder.':'A black hole. A bent sky.'),document.createElement('br'));const subtitle=document.createElement('span');subtitle.textContent=lab?'An oversized synthetic planet reveals what is hidden.':'An artistic accretion disk, written in light.';$('object-description').append(subtitle);
+  $('planet-setting').hidden=!lab;$('science-heading').textContent=lab?'Sparse stars, direct to text':'A compiled view of bent light';$('scene-explanation').textContent=lab?'The planet is deliberately oversized to make occultation visible. Move freely among 1,982 catalog stars; visibility queries decide which light reaches each character cell.':'Schwarzschild light paths. Illustrative disk and distant sky. This is an artistic interpretation, not an observation of the real Sagittarius A*.';
+  $('compute-label').textContent=lab?'Server frame':'Local compute';$('lookup-label').textContent=lab?'Native visibility query':'Appearance lookup';$('count-label').textContent=lab?'Occluded stars':'Disk cells';$('asset-label').textContent=lab?'Query rays':'Compiled asset';$('reset').textContent=lab?'Reset the lab camera':'Return to the horizon';
+  document.title=lab?'Visibility Lab — Compile Universe':'Sagittarius A* — Compile Universe';updateLabels();updateBackendNote();invalidate();
+}
+function toggleDrawer(value){const open=value===undefined?$('drawer').hidden:Boolean(value);lastTelemetryAt=0;$('drawer').hidden=!open;$('settings').setAttribute('aria-expanded',String(open));if(open){keys.clear();invalidate();}}
+async function fullscreen(){try{if(document.fullscreenElement)await document.exitFullscreen();else await $('observatory').requestFullscreen();}catch(error){showError('Fullscreen is unavailable in this window.');}}
+function showError(message){$('error-message').textContent=message;$('error').hidden=false;}
+function color(value,fallback){const s=String(value??'');return colorPattern.test(s)?(s.startsWith('#')?s:'#'+s):fallback;}
+function bytes(value){const n=Number(value)||0;return n>=1048576?(n/1048576).toFixed(1)+' MB':n>=1024?(n/1024).toFixed(1)+' KB':num.format(n)+' B';}
+function draw(data){
+  const drawStarted=performance.now();
+  if(!data||!Array.isArray(data.rows)||!data.stats)throw Error('The local server returned an invalid frame.');
+  const rebuild=textRows.length!==data.rows.length;
+  if(rebuild){textRows=[];const fragment=document.createDocumentFragment();data.rows.forEach((_,index)=>{const line=document.createElement('span');line.className='text-row';const newline=document.createTextNode(index<data.rows.length-1?'\n':'');line.append(newline);textRows.push({element:line,runs:[],newline});fragment.append(line);});screen.replaceChildren(fragment);}
+  data.rows.forEach((row,y)=>{
+    if(!Array.isArray(row))throw Error('The frame contains an invalid text row.');
+    const line=textRows[y];
+    row.forEach((run,x)=>{
+      if(!Array.isArray(run)||typeof run[1]!=='string')throw Error('The frame contains an invalid text run.');
+      let cached=line.runs[x];
+      if(!cached){const element=document.createElement('span'),text=document.createTextNode('');element.append(text);line.element.insertBefore(element,line.newline);cached={element,text,fg:null,bg:null,value:null};line.runs.push(cached);}
+      const fg=color(run[0],'#eee6dc'),bg=run.length>2?color(run[2],'#000000'):'';
+      if(cached.fg!==fg){cached.element.style.color=fg;cached.fg=fg;}
+      if(cached.bg!==bg){cached.element.style.backgroundColor=bg;cached.bg=bg;}
+      if(cached.value!==run[1]){cached.text.data=run[1];cached.value=run[1];}
+    });
+    while(line.runs.length>row.length)line.runs.pop().element.remove();
+  });
+  lastData=data;lastFrameVisible=performance.now();$('loading').hidden=true;$('error').hidden=true;
+  const s=data.stats;const cols=Number(s.cols)||state.cols,rows=Number(s.rows)||state.rows;if(cols!==drawnCols||rows!==drawnRows){drawnCols=cols;drawnRows=rows;fitText();}
+  $('grid-readout').textContent=`${drawnCols} × ${drawnRows}`;$('frame-time').textContent=Number(s.frame_ms||0).toFixed(2)+' ms';
+  const lab=state.scene==='lab';$('lookup-time').textContent=Number((lab?s.trace_ms:s.lookup_ms)||0).toFixed(3)+' ms';$('cell-count').textContent=num.format((lab?s.blocked_stars:s.disk_cells)||0);$('asset-size').textContent=lab?num.format(s.rays||0):bytes(s.asset_bytes);
+  updateBackendNote();
+  if(lab)$('radius-readout').textContent=num.format(s.visible_stars||0);
+  lastDrawMs=performance.now()-drawStarted;
+}
+function updateBackendNote(){
+  $('backend-note').textContent=state.scene==='blackhole'?'Compiled locally. '+(displayMode==='text'?'Selectable characters.':'Character display accelerated.')+' The scene is evaluated directly into characters.':'Visibility computed on the local server. Characters displayed '+(displayMode==='text'?'as selectable text.':'with glyph acceleration.');
+}
+function planarToRows(frame){
+  const rows=[],{cols,glyphsUint8:g,foregroundRGBUint8:fg,backgroundRGBUint8:bg}=frame;
+  const hex=n=>n.toString(16).padStart(2,'0');
+  for(let y=0;y<frame.rows;y++){const row=[];let previous='',text='',foreground='',background='';for(let x=0;x<cols;x++){const i=y*cols+x,k=i*3,f='#'+hex(fg[k])+hex(fg[k+1])+hex(fg[k+2]),b='#'+hex(bg[k])+hex(bg[k+1])+hex(bg[k+2]),key=f+b;if(key!==previous&&text){row.push([foreground,text,background]);text='';}previous=key;foreground=f;background=b;text+=String.fromCharCode(g[i]);}if(text)row.push([foreground,text,background]);rows.push(row);}return rows;
+}
+function runsToPlanar(data){
+  const {cols,rows}=data.stats,n=cols*rows,glyphsUint8=new Uint8Array(n),foregroundRGBUint8=new Uint8Array(n*3),backgroundRGBUint8=new Uint8Array(n*3);let offset=0;
+  for(const row of data.rows)for(const run of row){const fg=parseInt(String(run[0]).replace('#',''),16)||0,bg=parseInt(String(run[2]||'#000000').replace('#',''),16)||0;for(const char of run[1]){glyphsUint8[offset]=char.charCodeAt(0);foregroundRGBUint8.set([fg>>16,(fg>>8)&255,fg&255],offset*3);backgroundRGBUint8.set([bg>>16,(bg>>8)&255,bg&255],offset*3);offset++;}}
+  return {cols,rows,glyphsUint8,foregroundRGBUint8,backgroundRGBUint8};
+}
+function showFrame(frame,stats,ticket){
+  const started=performance.now();lastCellFrame=frame;
+  if(displayMode==='text')draw({rows:planarToRows(frame),stats});
+  else{glyphDisplay.render(frame);lastData={stats,frame};lastFrameVisible=performance.now();$('loading').hidden=true;$('error').hidden=true;drawnCols=frame.cols;drawnRows=frame.rows;
+    const gridLabel=`${frame.cols} × ${frame.rows}`+(adaptiveDensity?' · AUTO':'');if($('grid-readout').textContent!==gridLabel)$('grid-readout').textContent=gridLabel;
+    if(!$('drawer').hidden&&started-lastTelemetryAt>250){lastTelemetryAt=started;$('frame-time').textContent=Number(stats.frame_ms||0).toFixed(2)+' ms';$('lookup-time').textContent=Number((state.scene==='lab'?stats.trace_ms:stats.lookup_ms)||0).toFixed(3)+' ms';$('cell-count').textContent=num.format((state.scene==='lab'?stats.blocked_stars:stats.disk_cells)||0);$('asset-size').textContent=state.scene==='lab'?num.format(stats.rays||0):bytes(stats.asset_bytes);}
+    if(state.scene==='lab')$('radius-readout').textContent=num.format(stats.visible_stars||0);}
+  const now=performance.now();lastDrawMs=now-started;metrics.displayMs=lastDrawMs;metrics.computeMs=stats.frame_ms||0;metrics.frames++;observeMetric(metrics.computeTimes,metrics.computeMs);observeMetric(metrics.displayTimes,metrics.displayMs);
+  if(previousDisplayAt)observeMetric(metrics.frameIntervals,now-previousDisplayAt);previousDisplayAt=now;
+  if(ticket){metrics.workerRoundtripMs=now-ticket.started;observeMetric(metrics.workerRoundtrips,metrics.workerRoundtripMs);if(ticket.inputSerial>drawnInputSerial){observeMetric(metrics.inputLatencyMs,now-ticket.inputAt);drawnInputSerial=ticket.inputSerial;}}
+  if(adaptiveDensity&&state.scene==='blackhole'){
+    computeAverage=computeAverage?computeAverage*.9+Number(stats.worker_ms||stats.frame_ms||0)*.1:Number(stats.worker_ms||stats.frame_ms||0);
+    if(now-lastQualityChange>750&&computeAverage>12&&adaptiveQuality>.45){adaptiveQuality=Math.max(.45,adaptiveQuality*.8);lastQualityChange=now;adaptiveGrid();}
+    else if(now-lastQualityChange>3200&&computeAverage<6&&adaptiveQuality<1){adaptiveQuality=Math.min(1,adaptiveQuality*1.06);lastQualityChange=now;adaptiveGrid();}
+  }
+}
+async function initializeLocal(){
+  if(localInitialization)return localInitialization;
+  localInitialization=(async()=>{
+    if(!glyphDisplay){const {GlyphDisplay}=await import('./glyph-display.js');glyphDisplay=new GlyphDisplay($('glyphscreen'));}
+    if(worker)worker.terminate();workerReady=false;workerInitialized=false;
+    worker=new Worker(new URL('./player-worker.js',location.href),{type:'module'});
+    worker.onmessage=({data})=>{
+      if(data.type==='progress'){$('loading').querySelector('small').textContent=data.message;return;}
+      if(data.type==='ready'){workerReady=true;workerInitialized=true;nextRequest=0;return;}
+      if(data.type==='error'){workerTicket=null;pending=false;lastSentSignature='';showError(data.message);if(!workerInitialized)localInitialization=null;nextRequest=performance.now()+1500;return;}
+      if(data.type!=='frame')return;
+      const ticket=workerTicket;workerTicket=null;pending=false;
+      if(!ticket||ticket.id!==data.id||ticket.generation!==generation||state.scene!=='blackhole')return;
+      try{const {cols,rows}=data.stats,n=cols*rows,frame={cols,rows,glyphsUint8:new Uint8Array(data.buffer,0,n),foregroundRGBUint8:new Uint8Array(data.buffer,n,n*3),backgroundRGBUint8:new Uint8Array(data.buffer,n*4,n*3)};showFrame(frame,data.stats,ticket);}catch(error){showError(error.message);}
+    };
+    worker.onerror=event=>{workerReady=false;pending=false;workerTicket=null;localInitialization=null;showError(event.message||'The local player could not start.');};
+    worker.postMessage({type:'init',assetUrl:'/artifacts/universe.bin'});
+  })().catch(error=>{localInitialization=null;showError(error.message);});
+  return localInitialization;
+}
+function requestLocalFrame(now){
+  if(!workerReady||!glyphDisplay)return;
+  pending=true;lastRequestStarted=now;nextRequest=displayMode==='text'?now+1000/15:0;metrics.requestCount++;lastSentSignature=JSON.stringify(state);
+  workerTicket={id:++nextTicket,generation,started:now,inputSerial,inputAt:acceptedInputAt};
+  worker.postMessage({type:'frame',id:workerTicket.id,state});
+}
+async function requestFrame(now){
+  pending=true;lastRequestStarted=now;lastSentSignature=JSON.stringify(state);nextRequest=now+1000/60;const requestedGeneration=generation;const controller=new AbortController();const timer=setTimeout(()=>controller.abort(),20000);metrics.requestCount++;
+  try{const response=await fetch('/api/frame',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(state),signal:controller.signal,cache:'no-store'});if(!response.ok){let message=`Local server: HTTP ${response.status}.`;try{const body=await response.json();if(typeof body.error==='string')message=body.error;}catch(_){}throw Error(message);}const data=await response.json();if(requestedGeneration===generation){if(glyphDisplay)showFrame(runsToPlanar(data),data.stats);else draw(data);}}
+  catch(error){lastSentSignature='';showError(error.name==='AbortError'?'The observatory is taking longer than expected. Retrying…':`${error.message} Retrying…`);nextRequest=performance.now()+1500;}
+  finally{clearTimeout(timer);pending=false;}
+}
+function saveSnapshot(ansi=false){
+  if(!lastCellFrame)return;const f=lastCellFrame,g=f.glyphsUint8,fg=f.foregroundRGBUint8,bg=f.backgroundRGBUint8;let text='';
+  for(let y=0;y<f.rows;y++){let last='';for(let x=0;x<f.cols;x++){const i=y*f.cols+x,k=i*3;if(ansi){const escape=`\x1b[38;2;${fg[k]};${fg[k+1]};${fg[k+2]}m\x1b[48;2;${bg[k]};${bg[k+1]};${bg[k+2]}m`;if(escape!==last){text+=escape;last=escape;}}text+=String.fromCharCode(g[i]);}text+=(ansi?'\x1b[0m':'')+'\n';}
+  const url=URL.createObjectURL(new Blob([text],{type:'text/plain;charset=utf-8'})),link=document.createElement('a');link.href=url;link.download=(state.scene==='blackhole'?'sagittarius-a':'visibility-lab')+(ansi?'.ansi':'.txt');link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+}
+function clampCamera(){if(state.scene!=='blackhole')return;const r=Math.hypot(...state.position);if(r<6||r>120){const target=Math.max(6,Math.min(120,r));if(r>1e-8)state.position=state.position.map(v=>v*target/r);else state.position=[0,0,6];}}
+function updateMotion(dt){
+  const turning=dt*.65, left=Number(keys.has('ArrowLeft'))-Number(keys.has('ArrowRight')), up=Number(keys.has('ArrowUp'))-Number(keys.has('ArrowDown'));
+  if(freeFlight){state.yaw-=left*turning;state.pitch=Math.max(-1.5,Math.min(1.5,state.pitch+up*turning));const f=Number(keys.has('KeyW'))-Number(keys.has('KeyS')),r=Number(keys.has('KeyD'))-Number(keys.has('KeyA')),u=Number(keys.has('KeyR'))-Number(keys.has('KeyV'));const length=Math.hypot(f,r,u);if(length){const speed=dt*(keys.has('ShiftLeft')||keys.has('ShiftRight')?14:4)/length,sy=Math.sin(state.yaw),cy=Math.cos(state.yaw),sp=Math.sin(state.pitch),cp=Math.cos(state.pitch);state.position[0]+=(f*sy*cp+r*cy)*speed;state.position[1]+=(f*sp+u)*speed;state.position[2]+=(f*cy*cp-r*sy)*speed;clampCamera();}}
+  else if(state.scene==='blackhole'){if(left||up){orbit.azimuth-=left*turning;orbit.elevation=Math.max(-1.3,Math.min(1.3,orbit.elevation+up*turning));selectPreset('');}if(cinematic&&!paused)orbit.azimuth+=dt*(reducedMotion?.025:.065);syncOrbit();}
+  if(state.scene==='blackhole'){const radius=Math.hypot(...state.position).toFixed(1);if($('radius-readout').textContent!==radius)$('radius-readout').textContent=radius;}
+  const seconds=Math.floor(state.time),timeText=String(Math.floor(seconds/60)).padStart(2,'0')+':'+String(seconds%60).padStart(2,'0');if($('time-readout').textContent!==timeText)$('time-readout').textContent=timeText;
+}
+function tick(now){const dt=Math.min(.08,Math.max(0,(now-previousTick)/1000));previousTick=now;if(!document.hidden){if(!paused)state.time+=dt;updateMotion(dt);if(!pending&&now>=nextRequest&&(!paused||lastSentSignature!==JSON.stringify(state))){if(state.scene==='blackhole')requestLocalFrame(now);else if(now-lastRequestStarted>=1000/60)requestFrame(now);}}requestAnimationFrame(tick);}
+function formTarget(target){return target instanceof Element&&Boolean(target.closest('input,select,textarea,button,[contenteditable="true"]'));}
+function look(dx,dy){recordInput();if(freeFlight){state.yaw-=dx*.0045;state.pitch=Math.max(-1.5,Math.min(1.5,state.pitch+dy*.0045));}else{setCinematic(false);orbit.azimuth-=dx*.0045;orbit.elevation=Math.max(-1.3,Math.min(1.3,orbit.elevation+dy*.0045));syncOrbit();selectPreset('');}}
+function dolly(amount){recordInput();if(state.scene==='blackhole'&&!freeFlight){orbit.radius=Math.max(6,Math.min(120,orbit.radius*Math.exp(amount)));syncOrbit();selectPreset('');}else if(state.scene==='blackhole'){const distance=Math.hypot(...state.position),target=Math.max(6,Math.min(120,distance*Math.exp(amount)));state.position=state.position.map(v=>v*target/Math.max(distance,.001));}else state.fov=Math.max(15,Math.min(110,state.fov*Math.exp(amount)));}
+window.addEventListener('keydown',event=>{if(event.code==='Escape'){toggleDrawer(false);keys.clear();return;}if(formTarget(event.target))return;if(event.key==='?'||(event.code==='Slash'&&event.shiftKey)){event.preventDefault();toggleDrawer();return;}if(event.code==='KeyT'){event.preventDefault();if(!event.repeat)saveSnapshot(event.shiftKey);return;}if(event.code==='Space'){event.preventDefault();if(!event.repeat)setPaused(!paused);return;}if(event.code==='KeyC'){event.preventDefault();if(!event.repeat)setCinematic(!cinematic);return;}if(event.code==='KeyF'){event.preventDefault();if(!event.repeat)fullscreen();return;}if(['Digit1','Digit2','Digit3'].includes(event.code)){event.preventDefault();if(!event.repeat)setPreset({Digit1:'horizon',Digit2:'above',Digit3:'ring'}[event.code]);return;}if(movementKeys.has(event.code)){event.preventDefault();recordInput();keys.add(event.code);}});
+window.addEventListener('keyup',event=>keys.delete(event.code));window.addEventListener('blur',()=>{keys.clear();pointers.clear();viewport.classList.remove('dragging');});document.addEventListener('visibilitychange',()=>{keys.clear();previousTick=performance.now();});
+viewport.addEventListener('pointerdown',event=>{if(event.button!==0)return;viewport.focus({preventScroll:true});pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});viewport.setPointerCapture(event.pointerId);viewport.classList.add('dragging');if(pointers.size===2){const [a,b]=[...pointers.values()];pinchDistance=Math.hypot(a.x-b.x,a.y-b.y);}});
+viewport.addEventListener('pointermove',event=>{const previous=pointers.get(event.pointerId);if(!previous)return;const dx=event.clientX-previous.x,dy=event.clientY-previous.y;pointers.set(event.pointerId,{x:event.clientX,y:event.clientY});if(pointers.size===2){const[a,b]=[...pointers.values()],distance=Math.hypot(a.x-b.x,a.y-b.y);if(pinchDistance>0&&distance>0)dolly(Math.log(pinchDistance/distance));pinchDistance=distance;}else if(pointers.size===1)look(dx,dy);});
+function releasePointer(event){pointers.delete(event.pointerId);if(pointers.size<2)pinchDistance=0;if(!pointers.size)viewport.classList.remove('dragging');}
+['pointerup','pointercancel','lostpointercapture'].forEach(name=>viewport.addEventListener(name,releasePointer));viewport.addEventListener('wheel',event=>{event.preventDefault();const unit=event.deltaMode===1?16:event.deltaMode===2?viewport.clientHeight:1;dolly(Math.max(-.5,Math.min(.5,event.deltaY*unit*.0015)));},{passive:false});
+document.querySelectorAll('[data-preset]').forEach(button=>button.addEventListener('click',()=>{setPreset(button.dataset.preset);viewport.focus({preventScroll:true});}));
+$('scene').addEventListener('change',event=>setScene(event.target.value));$('pause').addEventListener('click',()=>{setPaused(!paused);viewport.focus({preventScroll:true});});$('cinematic').addEventListener('click',()=>{setCinematic(!cinematic);viewport.focus({preventScroll:true});});$('fullscreen').addEventListener('click',fullscreen);$('settings').addEventListener('click',()=>toggleDrawer());$('close-drawer').addEventListener('click',()=>toggleDrawer(false));$('reset').addEventListener('click',()=>{state.time=0;if(state.scene==='lab')setScene('lab');else setPreset('horizon');});$('retry').addEventListener('click',()=>{invalidate();if(state.scene==='blackhole'&&!workerReady)initializeLocal();});
+$('exposure').addEventListener('input',event=>{recordInput();state.exposure=Number(event.target.value);$('exposure-value').textContent=state.exposure.toFixed(2)+'×';invalidate();});$('resolution').addEventListener('change',event=>{recordInput();adaptiveQuality=1;adaptiveDensity=event.target.value==='adaptive';if(adaptiveDensity)adaptiveGrid();else [state.cols,state.rows]=event.target.value.split(',').map(Number);invalidate();});$('palette').addEventListener('change',event=>{recordInput();state.palette=event.target.value;invalidate();});$('bloom').addEventListener('change',event=>{recordInput();state.bloom=event.target.checked;invalidate();});$('planet').addEventListener('change',event=>{state.planet=event.target.checked;invalidate();});document.addEventListener('fullscreenchange',()=>{$('fullscreen').setAttribute('aria-label',document.fullscreenElement?'Exit fullscreen':'Enter fullscreen');});
+$('save-text').addEventListener('click',()=>saveSnapshot());$('save-ansi').addEventListener('click',()=>saveSnapshot(true));
+$('display-mode').addEventListener('change',event=>{displayMode=event.target.value;screen.hidden=displayMode!=='text';$('glyphscreen').hidden=displayMode==='text';fitText();updateBackendNote();invalidate();});
+new ResizeObserver(()=>{adaptiveGrid();fitText();}).observe(viewport);adaptiveGrid();fitText();updateLabels();
+window.__compiledUniverse={state,setPreset,setScene,setPaused,setCinematic,toggleDrawer,get data(){return lastData;},get pending(){return pending;},get lastFrameVisible(){return lastFrameVisible;},get lastDrawMs(){return lastDrawMs;},get freeFlight(){return freeFlight;},get paused(){return paused;},get cinematic(){return cinematic;},get reducedMotion(){return reducedMotion;},get metrics(){return metrics;},get localReady(){return workerReady;},get displayMode(){return displayMode;},saveSnapshot};
+window.__compileUniverse=window.__compiledUniverse;
+updateBackendNote();initializeLocal();
+requestAnimationFrame(tick);
+})();
+</script>
+</body>
+</html>

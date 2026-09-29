@@ -1,0 +1,33 @@
+{
+  "cols": 280,
+  "rows": 118,
+  "position": [
+    204.69411253101168,
+    1833.7577162229259,
+    745.7800101848399
+  ],
+  "yaw": -2.7194681668369105,
+  "pitch": -0.8285352685142523,
+  "roll": 0,
+  "fov": 48,
+  "time": 158.02710000001167,
+  "earthUtcMs": 1790517854640,
+  "exposure": 1,
+  "surveyMode": 1,
+  "surveyGain": 1,
+  "selectedIndex": -50003,
+  "selectedDestination": {
+    "index": -50003,
+    "id": "orion-nebula",
+    "name": "Orion Nebula",
+    "position": [
+      42.71801473115508,
+      394.51499025909675,
+      -37.42398258727944
+    ],
+    "radiusPc": 3,
+    "modelUnitPc": 3,
+    "sceneKind": "phenomenon",
+    "sceneId": 3
+  }
+}

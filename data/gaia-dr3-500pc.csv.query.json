@@ -1,0 +1,7 @@
+{
+  "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+  "query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,bp_rp,ruwe FROM gaiadr3.gaia_source WHERE parallax>2 AND parallax_over_error>10 AND phot_g_mean_mag<12 AND ruwe<1.4 AND bp_rp IS NOT NULL",
+  "maxrec": 1000000,
+  "bytes": 130237054,
+  "verifiedCount": 837250
+}

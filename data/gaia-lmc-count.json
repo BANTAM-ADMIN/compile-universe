@@ -1,0 +1,1 @@
+{"query": "SELECT COUNT(*) AS n FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',80.8939,-69.7561,6)) AND phot_g_mean_mag<16 AND parallax<0.2 AND pmra BETWEEN 0.5 AND 3.5 AND pmdec BETWEEN -0.8 AND 2 AND ruwe<1.4 AND bp_rp IS NOT NULL", "result": "n\n109008\n", "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync"}

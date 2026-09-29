@@ -1,0 +1,37 @@
+{
+  "url": "http://127.0.0.1:8768",
+  "scenarios": [
+    {
+      "name": "initial-catalog-failure-retry",
+      "catalogAttempts": 2,
+      "shownError": "/artifacts/gaia-atlas.bin: HTTP 503",
+      "passed": true
+    },
+    {
+      "name": "no-webgl-canvas2d-and-selectable-text",
+      "attempts": [
+        "webgl2",
+        "2d",
+        "2d"
+      ],
+      "coloredPixels": 71677,
+      "width": 1280,
+      "height": 797,
+      "displayMs": 15.799999982118607,
+      "grid": [
+        240,
+        83
+      ],
+      "passed": true,
+      "note": "Capability fallback check, not a physical low-end hardware performance measurement."
+    },
+    {
+      "name": "offline-search-travel-return-and-ansi",
+      "blockedRequests": [],
+      "displayedFrames": 11,
+      "plainBytes": 20003,
+      "ansiBytes": 244743,
+      "passed": true
+    }
+  ]
+}

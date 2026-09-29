@@ -1,0 +1,40 @@
+ + COMPILE UNIVERSE           [find /] [? help] [quit q]    
+                                                            
+ Sun / PLANETARY SYSTEM                      [close / esc]  
+ Fixed positions / click a world  1.00x   [-] [+] [fit 0]   
+                                                            
+                          ---------                         
+                      ----         ----                     
+                    //                 -\\                  
+                 ///        -----         \                 
+                //      /---     ----      \\               
+               //     //            -\\     \\              
+               |     //               \\     \              
+              |     |[Jupiter]----      \     |             
+              |    ||    |/ /----o\[Saturn]   |             
+              |    | [Earth]/ o o\ \     |    |             
+              |    |     \ \\ @o[Sun]    |    |             
+              |    ||  [Mars]---/./|    ||    |             
+              |\    \\     ------/     /|    ||             
+               \     \\               //     /              
+                \     \\-           //o [Uranus]            
+                 \\     -------------     //                
+                   \                     /                  
+                    ---               -o/[Neptune]          
+                       ---------------                      
+                                                            
+                                                            
+                                                            
+ +- SYSTEM / CLICK TO FLY --------------------------------+ 
+ | [planets] [inner] [all] [moons <] [moons >] [find /]   | 
+ |                                                        | 
+ | > [Sun]                      [Mercury]                 | 
+ |   [Venus]                    [Earth]                   | 
+ |   [Mars]                     [Jupiter]                 | 
+ |   [Saturn]                   [Uranus]                  | 
+ |   [Neptune]                                            | 
+ |                                                        | 
+ | 1-9/9  arrows: select / Enter: fly       [<] [>]       | 
+ +--------------------------------------------------------+ 
+                                                            
+ wheel +/-: zoom / 0: fit / arrows: select /  0 fps MAP     

@@ -1,0 +1,89 @@
+{
+  "records": [
+    {
+      "id": "dysnomia",
+      "name": "Dysnomia",
+      "parent": "eris",
+      "index": -40,
+      "radiusKm": 350.0,
+      "radiusUncertaintyKm": 57.5,
+      "separationKm": 37273.0,
+      "separationType": "published semimajor axis",
+      "periodDays": 15.785899,
+      "positionSource": {
+        "url": "https://arxiv.org/html/2009.13733",
+        "citation": "Holler et al. (2021), The Eris/Dysnomia system I: The orbit of Dysnomia, Table 2 and section 4"
+      },
+      "radiusSource": {
+        "url": "https://arxiv.org/html/2009.13733",
+        "citation": "Holler et al. (2021), The Eris/Dysnomia system I: The orbit of Dysnomia, Table 2 and section 4",
+        "note": "Brown and Butler (2018) thermal radius cited by Holler et al. (2021); radius is model-dependent"
+      }
+    },
+    {
+      "id": "hiiaka",
+      "name": "Hiʻiaka",
+      "aliases": [
+        "Hi'iaka",
+        "Hiiaka"
+      ],
+      "parent": "haumea",
+      "index": -41,
+      "radiusKm": 150.0,
+      "separationKm": 49880.0,
+      "separationType": "published semimajor axis",
+      "periodDays": 49.462,
+      "positionSource": {
+        "url": "https://arxiv.org/html/0903.4213",
+        "citation": "Ragozzine & Brown (2009), Orbits and Masses of the Satellites of the Dwarf Planet Haumea, Table 2"
+      },
+      "radiusSource": {
+        "url": "https://arxiv.org/abs/1811.09476",
+        "citation": "Müller et al. (2019), Haumea's thermal emission revisited in the light of the occultation results",
+        "note": "Approximate thermal-model diameter 300 km divided by two; depends on assumed albedo"
+      }
+    },
+    {
+      "id": "namaka",
+      "name": "Namaka",
+      "parent": "haumea",
+      "index": -42,
+      "radiusKm": 75.0,
+      "separationKm": 25657.0,
+      "separationType": "published semimajor axis",
+      "periodDays": 18.2783,
+      "positionSource": {
+        "url": "https://arxiv.org/html/0903.4213",
+        "citation": "Ragozzine & Brown (2009), Orbits and Masses of the Satellites of the Dwarf Planet Haumea, Table 2"
+      },
+      "radiusSource": {
+        "url": "https://arxiv.org/abs/1811.09476",
+        "citation": "Müller et al. (2019), Haumea's thermal emission revisited in the light of the occultation results",
+        "note": "Approximate thermal-model diameter 150 km divided by two; depends on assumed albedo"
+      }
+    },
+    {
+      "id": "mk2",
+      "name": "MK 2",
+      "aliases": [
+        "S/2015 (136472) 1"
+      ],
+      "parent": "makemake",
+      "index": -43,
+      "radiusKm": 80.0,
+      "separationKm": 20921.472,
+      "separationType": "observed projected separation, not a fitted semimajor axis",
+      "periodDays": null,
+      "positionSource": {
+        "url": "https://science.nasa.gov/dwarf-planets/makemake/",
+        "citation": "NASA Science, Makemake facts, moons section"
+      },
+      "radiusSource": {
+        "url": "https://science.nasa.gov/dwarf-planets/makemake/",
+        "citation": "NASA Science, Makemake facts, moons section",
+        "note": "NASA estimated radius; not a directly resolved surface measurement"
+      }
+    }
+  ],
+  "note": "Known dwarf-planet companions outside JPL planetary-satellite mean-element table; factual scalar values verified against cited primary publications; scene phases are illustrative."
+}

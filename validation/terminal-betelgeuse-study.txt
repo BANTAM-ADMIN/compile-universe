@@ -1,0 +1,42 @@
+ + COMPILE UNIVERSE                                                                       [find /] [? help] [quit q]    
+.:.:.:pdwbaoadqqmpko####MMMM#MMW&88%%%%8888%%%BBBB%%8&W#akpm00QQmwwmmQQOZYUJCCLLttLCJUYXZO0QQQ0XUCJYOmkM&88&WMadZYw.*:::
+:..::bpQbaakpwmOmboooo##MMMMMMW&8%%%%%88888%%%%%%%8&&WMohdw0OOO00QQ0000OOZXYYUJCLLLCJUYXXZO00Q0OXUJYZ0qaW&888&&&#qJZ*..:
+:.:.pq0bahbwQOYOphaaoo#MMMMMW&&8%%%%%8888888888888&WM##abpQZXZZZZOOZZZOOOOOOZXYUCLCCJUYXXXZOOOOOZXYXZOQpaWW&&&&&&WkCL*:.
+:::pq0dkbpQXUCYmbhhao#MMMWWW&88%%%%8888888888&&&&WM#oahbqmOYYXZO0000QQmmmwwwmQ0OXYXXZO0000QQ00000OZZOO0mdaMWWW&WWWMkOC*.
+:.qw0qdpq0ZYCLXmdkho#MWW&&&8888888&&&WWWWW&WWWWWM#oakbpqm0XUYXO0mwqqqpddbbbbbdqwmQQwqpddddddppqpqwm0OOO0qk#WWWWWM#M#awX*
+:ppwwqqqwwQZJYOwba#MW&&&&888888&WWMMMMMMMMMM####oakbpqmQOZYJYZ0mqdbkkhaooooooakbdddbhaooooaahhkkkbdwQ0OZOpaWMWWWMooooamO
+qdqqqqqqddwXYZQqkoMWWWWWW&&&&&WWMM##########oooahkdqmQ00OOZXOQwpkhaoo##MMMMM##ahhkkhoo#MM####ooooahbpw0ZYQboM#MM#akhhkhY
+qQ0OZZOQqmOXXOQqba#######MMMMMMMM########MM####oakdqm0Qmmmmwqdka#MMWWW&&&&&WWM#ooaao#MWWWWWWWWWMMM#oakpQXXmdaaoMMoahkkbp
+XYJJJJXO0OXXXZ0wbaooaaaaaaaaoo#MMM####MMMWWWMMMMohbqm0mqpdbkha#M&8888888888&&WWMM##MWW&888888888&&WMM#hpOJXQpkh#MM#ooooa
+JJUYYZ0mQ0OOZZQqbaahkbbbbdddbkhhhhkkkhhaooooooooakdpwmqpdkhao#W&8%%%%%%%%%%%88&&WWMMW&88%%%%%%%88&WWWM#kmXUZmpkoWWWMMMMM
+ZQpppddpqmQ0O0wpkhkbdpqqwmmwwqppqwmmmwqpddbbbkkkbdpqwwqpdkhaoMW&8%%%%BBBBB%%%%88&WWMW&8%%%%%%%888&&WWWMap0YZ0wboW&WWMMWW
+qa##oahbdqwQ0QqdkbdqwmQ00OO00QQ0OZYUYXZOO0QmmwwqwwwmmmqpdbkhoMW&8%%%%BBBBBBBBB%88&WMW&8%BBB%%%888&&WWWWobwZO0mpaW&&WMMWW
+aMM###ahdqm0OmpkhhkbppqqqqqqqqqmQOZXXXXZZZO00Qmmwwwwwqqpddbka#M&88%%%BBBBBBBBB%88&WMW&8%BBBB%%%888&&WWW#hdm00QQboWWM####
+#WMMMMohdwQZOwbaoooahhaaaaaaaahkbpqwmQ00OO00Qmwwqqpppddddddbho#MW&88%BBBBBBB%%88&WWMW&8%%BB%%%%%%88&&WWMakqQQ00wbaoahkkk
+MWMWWWokpmOY0qko#MMMMMW&&&&&WWMM#oahbpwm00QQmwwqppdbkbbddppdbhao#M&88%BBBBB%%88&&WMMW&&8%%%%%%B%%%88&&WW#hbqm0ZOmpkdpqqw
+MMMWWWobqQZXQpho#MMWW&&8%%8888&&WWM#akpwQQQmmwqpdbkhahkbdpqqdbkhaoM&8%BBBB%%88&WWWMMW&&88%%%%BB%%%888&&WMokdwQOXOQwmQ00Q
+#MMW&Mobw0ZZmpkao#MMW&&8888888&&WWMoabpwQQmmwqqdbhao#oahkdpppdbbkhoMW8%B%%%88&WWWWWW&&888%%%%%B%%%888&&&W#akpw0XXZOOZYXZ
+o#WW&Modw0XOmpkao#MMWW&888888&&&WMMohbqmQQmwwqpbka#MWM#ahbdppppppdka#W&%%888&&WWW&&&88888%%%%%B%%%%888&&WMohbqmOXXYYUJUX
+a#W&&MobqQZQqbhaoo#MMW&888888&&WWM#akdqmQmmwqqdkaoMW&WM#akdpqwwmmmpka#W&8&&&&WWWW&&8888888%%%%%%%%%8888&&W#ohdwOXXXZZXZO
+h#W&&MabqQOwdhooooo#MW8888%%%88&WWMohdqmQmmwqqpbaoM&&WM#ahbpqwmQ00wdkoM&&&&&&&WW&&888%%%%%%%%%%%%%8888&&&WM#obwOYXZO0QQQ
+h#W&W#akpQOqko##oao#M&88%%%%%%88&WMohdqQ0QmmwqpbhoMW&WM#oakbpwm0ZZQpba#W&&&&&&&&&88%%%%%%%%%%%%%88888&&&WWWMMhqOUYZQmwwm
+ao#MMohdqQ0qh#M#oaa#M&8%%%BBB%%8&&Wohdw000Qmmwqdko#W&WMM#oakdqm0ZX0wdh#WW&&&&88888%%BBB%%%%%%%8888888&&WWWWWMhpOUXOmwmmQ
+aao##abpm00ph#MM###MW&88%%%BBB%%8&W#hdw0O00Qmmwdka#MWWWM###akpw0XY0wpka#MWW&88888%%BBBBB%%%%%88888888&&&&&WWMhp0UXQqqm0O
+ahhaakpwQ00phMWWWMMWW&&888%%B%%%88W#hdw0O00QQmwdka#W&&WWWWWMokdw0ZQwqdkhaoMW&8888%%%%BBBB%%%%88888888&&&&&&W#hp0YZmpw0ZX
+ohhahdQ0OOQphMWWWWWWWW&&&88%%%%%88W#hdw000QQmmwdka#W&&&&&&&WMakpm0Qmwqqpdka#W&88888%%%%B%%%%88888888&&&88&WMokq0XZ0m0ZUU
+ohkhhp0ZO0mph#WWW&&&&&&&&&8%%%%%%8W#hdqQ0QQmmmwdko#W&88888%8W#abqQmQQQQ0mqba#&&&88888%%%%%%%8888888&&&WWMMoakdwQOZOOZUCC
+okddpmZYZQwdho#MW&&&8888888%%%%%%8&Mohdqwwwwmmwdka#M&&&&&&8&Mohdw000OZZXZQwdho##MMW&&8%%%%%%%%%888&&&WMohkdpqwmQ0ZO0OZZX
+hkpwQOYJYZQpka#MW&88888888%%%%%%%%8&Mohdpqqwwmwpbho#WMMMMMM#akpmOXXXYYUUYXOQwqpdkaoMW&88%%%%%%%%8&&&WMabwwwwqdddppppqm0Z
+QwqmOYJCJXOwba#MW&888888888%%%%%BB%8&Mokdpqqwmwpdkao##ooaahkdwQZYJCCCCCCJUYYYYXOQqka#W&88%%%%%88&WMM#ohbpdbho###ooaakdwO
+LYmwwm0ZYYZmdaMWW&&888888888888%%%%8&Makdpqqwwwqdbkhoahkbddqm0ZYCLtLLCCJUUUUJJJYOmpkao##MWWWWMM#aahhhkkbbh#W8888&M#akkpw
+XZmqpdddwQOQqkoMWW&&&&&888888888888&MohdqqqwwwwqppdbkbbdppqwQ0ZYUCCJUYZO000OZZXZ0mwpdbbkkkhhkbbdppppdbbka#W&88&&M#oaoohd
+JbhoaaaoadQOQwdkao#MW&&8888888&&&&WMohbqmmmmmmmmwwwwqqwwwmmQQ0OOZXZOQwpbkbdpqwmmmmwwmmmmmQQQQQQQQmwqdkhoMWWWWWM#oaao#okw
+LqM8&WWWW#km0OQwdho#MW&&&&WWMM#oahhkbdqmQQQQmmmQQ000OO0OOOOO00QQQmwpbho#MM#ahkdpqqwmQ000OOO00QQmmwqpbhoMWWWM#oooooo#ohbO
+CJ#&8%8888W#kpm0mpko#MW&&WMoakdqwQ000QQQQmmmQQQ0OOZXXYYYXXXXZOQmqpbka#MW&&WM#oakbdqwmQQ0OOOOO00QmwqpkaM&&WWMMMMMMM#ohbmY
+ Betelgeuse                 dw0XUCttCUXO0QQQQQQ0OZXYUJJJJJJUYZ0wpbka#MW&8&&WWM#oakbpqwmQ0ZZZZZZOQwpba#MWWWWWWWWWWM#abwOp
+ PHENOMENON / 2.06 AU       QOZYUCLtCUX0mwwmmmm0OXYUCCCCCCCCUZ0wdkaoMW&8888&&&WM#oakbpwQOXYYUUJY0wbao###MW&&&&&WM#akpQda
+...YM&&888%%%8Wodw0ZYXZOQmQOXUJUYYYYZQqdkhkbdppwQOZYJCCCCCLCUX0wdka#MW&88888888&WM#ahbpm0ZYUJCLU0ph#ooaa#MW&&&WM#oakQdo:
+.:..O#&88&&8888W#hpmOXZZO00ZYJLJYZ0mpkoM&&WM#ohkdwQZYJJJCCCCUZ0wdha#MW&8%%%%%%%8&WM#akdwQZXUCLLXmbo#ooao#W&&&WMoaaowq#::
+ [find /] [map m] [tour t] [orbit/free o] [hold b] [space pause]                                                        
+                                                                                                                        
+ arrows/drag: steer  B: hold/cruise  WS/wheel: zoom                                                       0 fps ORBIT   

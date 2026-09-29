@@ -1,0 +1,24 @@
+ + COMPILE UNIVERSE                               [find /] [? help] [quit q]    
+                  ..                                                ..          
+ Earth / MOON FAMILY                                             [close / esc]  
+ Fixed positions / click a world to fly               1.00x   [-] [+] [fit 0]   
+                                                                                
+                                    /--------                                   
+               ...                 //       \\                                  
+                                  |/          \                                 
+                                  |           ||                                
+                         ..       |     @ [Earth]                               
+                                  \\        ./|                                 
+             ...                   o-[Moon] //                                  
+                                 .   -------                                    
+                                                      .                         
+                      ..                                                        
+ +- SYSTEM / CLICK TO FLY ----------------------------------------------------+ 
+ | [planets] [inner] [all] [moons <] [moons >] [find /]                       | 
+ |                                                                            | 
+ | > [Earth]                              [Moon]                              | 
+ |                                                                            | 
+ | 1-2/2  arrows: select / Enter: fly                           [<] [>]       | 
+ +----------------------------------------------------------------------------+ 
+                             .                                                  
+ wheel +/-: zoom / 0: fit / arrows: select / Enter: fly / Esc: re 0 fps MAP     

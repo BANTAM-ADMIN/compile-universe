@@ -1,0 +1,1 @@
+{"query": "SELECT COUNT(*) AS n FROM gaiadr3.gaia_source WHERE parallax>2 AND parallax_over_error>10 AND phot_g_mean_mag<12 AND ruwe<1.4 AND bp_rp IS NOT NULL", "result": "n\n837250\n", "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync"}

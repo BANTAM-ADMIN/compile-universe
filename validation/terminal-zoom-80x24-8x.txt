@@ -1,0 +1,24 @@
+ + COMPILE UNIVERSE                               [find /] [? help] [quit q]    
+                   .                                                            
+ Sun / PLANETARY SYSTEM                                          [close / esc]  
+ Fixed positions / click a world to fly               8.00x   [-] [+] [fit 0]   
+     |                    /..      --       --        \                   |     
+     |                   |       ///         \\\ [Jupiter]                |     
+     |          ..      ||      //             o\      |                  |     
+     |                  |       |  .      [Earth]       |                 |     
+     |                  |      |      |/o-\     ||      |                 |     
+     |                  |      ||[Sun]\o@/o     ||      |                 |     
+     ||                 |       \        [Venus]|      ||                 |     
+      |      ...         \      \\[Mars]       //      |                  |     
+      |                  \       \\-         //       /                  |      
+       |                  \         --     --        //                  |      
+                      ...                                                       
+ +- SYSTEM / CLICK TO FLY ----------------------------------------------------+ 
+ | [planets] [inner] [all] [moons <] [moons >] [find /]                       | 
+ |                                                                            | 
+ | > [Sun]                                [Mercury]                           | 
+ |   [Venus]                              [Earth]                             | 
+ | 1-4/9  arrows: select / Enter: fly                           [<] [>]       | 
+ +----------------------------------------------------------------------------+ 
+                                                                                
+ wheel +/-: zoom / 0: fit / arrows: select / Enter: fly / Esc: re 0 fps MAP     

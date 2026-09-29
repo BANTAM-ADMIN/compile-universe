@@ -1,0 +1,5 @@
+# Only required to regenerate compiled assets (playback uses requirements.txt).
+-r requirements.txt
+scipy>=1.10
+pillow>=10
+pyerfa>=2

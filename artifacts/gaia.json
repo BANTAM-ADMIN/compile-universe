@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "baseCount": 109401,
+  "totalCount": 1000983,
+  "nodeCount": 131071,
+  "counts": {
+    "500pc": {
+      "downloaded": 837250,
+      "retained": 782574,
+      "hygMatchesRemoved": 54676,
+      "raHistogram30deg": [
+        56662,
+        59610,
+        69087,
+        88119,
+        73055,
+        59876,
+        54766,
+        62691,
+        73597,
+        92935,
+        82072,
+        64780
+      ]
+    },
+    "lmc": {
+      "downloaded": 109008,
+      "retained": 109008,
+      "hygMatchesRemoved": 0,
+      "raHistogram30deg": [
+        0,
+        0,
+        102545,
+        6463,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    }
+  },
+  "inputs": [
+    {
+      "path": "data/gaia-dr3-500pc.csv.gz",
+      "sha256": "bffda200baa55b4d729cf405c7a8f229904e83e749306361fda60ba5338a7d22",
+      "download": {
+        "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+        "query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,bp_rp,ruwe FROM gaiadr3.gaia_source WHERE parallax>2 AND parallax_over_error>10 AND phot_g_mean_mag<12 AND ruwe<1.4 AND bp_rp IS NOT NULL",
+        "maxrec": 1000000,
+        "bytes": 130237054,
+        "verifiedCount": 837250
+      }
+    },
+    {
+      "path": "data/gaia-dr3-lmc.csv.gz",
+      "sha256": "ed2a361fde1a55958e63a27e357a0d5a22ac36f939ccef7a4d237926d6aa9d09",
+      "download": {
+        "endpoint": "https://gaia.ari.uni-heidelberg.de/tap/sync",
+        "query": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,bp_rp,ruwe FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',80.8939,-69.7561,6)) AND phot_g_mean_mag<16 AND parallax<0.2 AND pmra BETWEEN 0.5 AND 3.5 AND pmdec BETWEEN -0.8 AND 2 AND ruwe<1.4 AND bp_rp IS NOT NULL",
+        "maxrec": 1000000,
+        "bytes": 17256635,
+        "verifiedCount": 109008
+      }
+    }
+  ],
+  "queries": {
+    "nearby": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,bp_rp,ruwe FROM gaiadr3.gaia_source WHERE parallax>2 AND parallax_over_error>10 AND phot_g_mean_mag<12 AND ruwe<1.4 AND bp_rp IS NOT NULL",
+    "lmc": "SELECT source_id,ra,dec,parallax,parallax_error,pmra,pmdec,phot_g_mean_mag,bp_rp,ruwe FROM gaiadr3.gaia_source WHERE 1=CONTAINS(POINT('ICRS',ra,dec),CIRCLE('ICRS',80.8939,-69.7561,6)) AND phot_g_mean_mag<16 AND parallax<0.2 AND pmra BETWEEN 0.5 AND 3.5 AND pmdec BETWEEN -0.8 AND 2 AND ruwe<1.4 AND bp_rp IS NOT NULL"
+  },
+  "coordinateEpoch": "J2000 angular proper-motion propagation from Gaia DR3 J2016.0; fixed radial distance",
+  "nearbyDistance": "1000/parallax_mas; S/N >10, within 500 pc, G<12. No Gaia parallax zero-point correction; formal uncertainties retained.",
+  "lmcDistance": "Candidate members by sky/proper-motion/parallax cuts. Observed angles and photometry; reconstructed inclined disk at 49.59 kpc, inclination 34.7 deg, line-of-nodes 122.5 deg, seeded thickness \u00b1300 pc. Individual depths are not measured.",
+  "appearance": "BP\u2212RP drives illustrative RGB/temperature; G-band photometry drives summed relative light. Display exposure is artistic. Extinction is not removed or recomputed for displaced observers; radius estimates are illustrative.",
+  "cloudDisplayGain": 4.0,
+  "scope": "A quality-filtered, magnitude-limited nearby sample plus LMC candidate field, not the entire Gaia catalog or a complete Milky Way census.",
+  "sources": [
+    "https://www.cosmos.esa.int/web/gaia/dr3",
+    "https://arxiv.org/abs/1903.08096",
+    "https://arxiv.org/abs/astro-ph/0105339",
+    "https://www.eso.org/public/news/eso1540/"
+  ],
+  "credit": "ESA/Gaia/DPAC; Gaia DR3. HYG credits and license retained separately.",
+  "atlasSha256": "dc24c9a6a9818ba94881b611fbbce93387ebfe99d6ad600a94cdb9955a46c10b",
+  "lightSha256": "3021c3eebe80809fcfd729b380ef878c33c30ef965b4bed796419c9ddf0a4c8a"
+}

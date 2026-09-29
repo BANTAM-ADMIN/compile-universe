@@ -1,0 +1,38 @@
+{
+  "description": "Selected published linear stellar radii derived from measured angular diameters and parallaxes. These fixed values do not modify HYG astrometry or visual luminosities. Uncertainties are the cited one-sigma errors, not propagated in the renderer.",
+  "stars": {
+    "71456": {
+      "name": "Alpha Centauri A",
+      "radius_solar": 1.2234,
+      "uncertainty_solar": 0.0053,
+      "method": "VLTI/PIONIER interferometry plus parallax",
+      "citation": "Kervella et al. (2017), A&A 597, A137",
+      "url": "https://arxiv.org/abs/1610.06185"
+    },
+    "71453": {
+      "name": "Alpha Centauri B",
+      "radius_solar": 0.8632,
+      "uncertainty_solar": 0.0037,
+      "method": "VLTI/PIONIER interferometry plus parallax",
+      "citation": "Kervella et al. (2017), A&A 597, A137",
+      "url": "https://arxiv.org/abs/1610.06185"
+    },
+    "70666": {
+      "name": "Proxima Centauri",
+      "radius_solar": 0.141,
+      "uncertainty_solar": 0.007,
+      "method": "VLTI/AMBER interferometry plus parallax",
+      "citation": "Demory et al. (2009), A&A 505, 205, Table 4",
+      "url": "https://arxiv.org/abs/0906.0602",
+      "note": "Uses the directly interferometric radius. The later frequently adopted 0.1542 R_sun value is inferred from an empirical relation, rather than this measurement."
+    },
+    "32263": {
+      "name": "Sirius A",
+      "radius_solar": 1.713,
+      "uncertainty_solar": 0.009,
+      "method": "Combined SUSI/VLTI interferometry plus Hipparcos parallax",
+      "citation": "Davis et al. (2011), PASA 28, 1; preprint 2010",
+      "url": "https://arxiv.org/abs/1010.3790"
+    }
+  }
+}

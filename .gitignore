@@ -1,0 +1,5 @@
+__pycache__/
+native/build/
+artifacts/*.npz
+artifacts/*.cast
+artifacts/*.png

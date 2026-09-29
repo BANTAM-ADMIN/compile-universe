@@ -1,0 +1,294 @@
+{
+  "generated_utc": "2026-09-26T16:05:56.029209+00:00",
+  "host": "Linux-6.17.0-35-generic-x86_64-with-glibc2.39",
+  "python": "3.12.2",
+  "numpy": "2.5.1",
+  "gpu": "NVIDIA GeForce RTX 4090, 590.48.01",
+  "seed": 20260926,
+  "rays": 20000,
+  "repeats": 3,
+  "availability": {
+    "brute": {
+      "status": "ok",
+      "initialization_wall_ms": 0.21324199042282999,
+      "native_trace_timing_scope": "native CPU traversal",
+      "native_build_timing_scope": "native CPU construction"
+    },
+    "cpu": {
+      "status": "ok",
+      "initialization_wall_ms": 0.08159999561030418,
+      "native_trace_timing_scope": "native CPU traversal",
+      "native_build_timing_scope": "native CPU construction"
+    },
+    "rt": {
+      "status": "ok",
+      "initialization_wall_ms": 178.10603600810282,
+      "native_trace_timing_scope": "device launch only",
+      "native_build_timing_scope": "device acceleration structure build only"
+    }
+  },
+  "scenes": [
+    {
+      "spheres": 1,
+      "backends": {
+        "brute": {
+          "build_wall_ms": 0.0447999918833375,
+          "build_native_ms": 0.00261,
+          "trace_wall_ms_samples": [
+            0.551752993487753,
+            0.5286529922159389,
+            0.5335640016710386
+          ],
+          "trace_native_ms_samples": [
+            0.178651,
+            0.177301,
+            0.177431
+          ],
+          "trace_wall_ms_median": 0.5335640016710386,
+          "trace_native_ms_median": 0.177431,
+          "trace_million_rays_per_second_wall": 37.483788144183535,
+          "native_query_counts": {
+            "sphere_tests": 20000,
+            "node_tests": 0
+          },
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "native CPU traversal",
+          "native_build_timing_scope": "native CPU construction",
+          "speedup_vs_brute_wall": 1.0
+        },
+        "cpu": {
+          "build_wall_ms": 0.014949997421354055,
+          "build_native_ms": 0.00062,
+          "trace_wall_ms_samples": [
+            0.743964992580004,
+            0.726233993191272,
+            0.7197550003184006
+          ],
+          "trace_native_ms_samples": [
+            0.380803,
+            0.363632,
+            0.360302
+          ],
+          "trace_wall_ms_median": 0.726233993191272,
+          "trace_native_ms_median": 0.363632,
+          "trace_million_rays_per_second_wall": 27.539333310624162,
+          "native_query_counts": {
+            "sphere_tests": 8008,
+            "node_tests": 20000
+          },
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "native CPU traversal",
+          "native_build_timing_scope": "native CPU construction",
+          "speedup_vs_brute_wall": 0.734699844228458
+        },
+        "rt": {
+          "build_wall_ms": 0.16891100676730275,
+          "build_native_ms": 0.08294399827718735,
+          "trace_wall_ms_samples": [
+            0.5092030041851103,
+            0.5333139997674152,
+            0.5868529988219962
+          ],
+          "trace_native_ms_samples": [
+            0.01228800043463707,
+            0.018432000651955605,
+            0.01740800030529499
+          ],
+          "trace_wall_ms_median": 0.5333139997674152,
+          "trace_native_ms_median": 0.01740800030529499,
+          "trace_million_rays_per_second_wall": 37.501359440633934,
+          "native_query_counts": {},
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "device launch only",
+          "native_build_timing_scope": "device acceleration structure build only",
+          "speedup_vs_brute_wall": 1.000468770562431
+        }
+      },
+      "reference_hits": 8001
+    },
+    {
+      "spheres": 100,
+      "backends": {
+        "brute": {
+          "build_wall_ms": 0.05900999531149864,
+          "build_native_ms": 0.02469,
+          "trace_wall_ms_samples": [
+            4.16061699797865,
+            4.174465997493826,
+            4.184347009868361
+          ],
+          "trace_native_ms_samples": [
+            3.787225,
+            3.823004,
+            3.833265
+          ],
+          "trace_wall_ms_median": 4.174465997493826,
+          "trace_native_ms_median": 3.823004,
+          "trace_million_rays_per_second_wall": 4.791031957622163,
+          "native_query_counts": {
+            "sphere_tests": 2000000,
+            "node_tests": 0
+          },
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "native CPU traversal",
+          "native_build_timing_scope": "native CPU construction",
+          "speedup_vs_brute_wall": 1.0
+        },
+        "cpu": {
+          "build_wall_ms": 0.037299992982298136,
+          "build_native_ms": 0.02352,
+          "trace_wall_ms_samples": [
+            2.75867800519336,
+            2.7533169923117384,
+            2.7793879999080673
+          ],
+          "trace_native_ms_samples": [
+            2.404346,
+            2.401945,
+            2.411956
+          ],
+          "trace_wall_ms_median": 2.75867800519336,
+          "trace_native_ms_median": 2.404346,
+          "trace_million_rays_per_second_wall": 7.249849370730807,
+          "native_query_counts": {
+            "sphere_tests": 64416,
+            "node_tests": 224344
+          },
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "native CPU traversal",
+          "native_build_timing_scope": "native CPU construction",
+          "speedup_vs_brute_wall": 1.5132124842533883
+        },
+        "rt": {
+          "build_wall_ms": 0.2472909982316196,
+          "build_native_ms": 0.11264000087976456,
+          "trace_wall_ms_samples": [
+            0.5231240065768361,
+            0.5144629976712167,
+            0.5218529986450449
+          ],
+          "trace_native_ms_samples": [
+            0.02457600086927414,
+            0.020479999482631683,
+            0.02252800017595291
+          ],
+          "trace_wall_ms_median": 0.5218529986450449,
+          "trace_native_ms_median": 0.02252800017595291,
+          "trace_million_rays_per_second_wall": 38.324969008377096,
+          "native_query_counts": {},
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "device launch only",
+          "native_build_timing_scope": "device acceleration structure build only",
+          "speedup_vs_brute_wall": 7.999313999023743
+        }
+      },
+      "reference_hits": 8110
+    },
+    {
+      "spheres": 1000,
+      "backends": {
+        "brute": {
+          "build_wall_ms": 0.4487529949983582,
+          "build_native_ms": 0.422413,
+          "trace_wall_ms_samples": [
+            37.482589003047906,
+            36.429353000130504,
+            36.08408999571111
+          ],
+          "trace_native_ms_samples": [
+            37.077816,
+            35.94244,
+            35.664778
+          ],
+          "trace_wall_ms_median": 36.429353000130504,
+          "trace_native_ms_median": 35.94244,
+          "trace_million_rays_per_second_wall": 0.549007828932025,
+          "native_query_counts": {
+            "sphere_tests": 20000000,
+            "node_tests": 0
+          },
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "native CPU traversal",
+          "native_build_timing_scope": "native CPU construction",
+          "speedup_vs_brute_wall": 1.0
+        },
+        "cpu": {
+          "build_wall_ms": 0.33430200710427016,
+          "build_native_ms": 0.316272,
+          "trace_wall_ms_samples": [
+            6.776563997846097,
+            6.771653002942912,
+            6.797452995670028
+          ],
+          "trace_native_ms_samples": [
+            6.409631,
+            6.408531,
+            6.416201
+          ],
+          "trace_wall_ms_median": 6.776563997846097,
+          "trace_native_ms_median": 6.409631,
+          "trace_million_rays_per_second_wall": 2.9513482063117706,
+          "native_query_counts": {
+            "sphere_tests": 177197,
+            "node_tests": 522566
+          },
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "native CPU traversal",
+          "native_build_timing_scope": "native CPU construction",
+          "speedup_vs_brute_wall": 5.375785281701674
+        },
+        "rt": {
+          "build_wall_ms": 0.3311219916213304,
+          "build_native_ms": 0.1454080045223236,
+          "trace_wall_ms_samples": [
+            0.5340330098988488,
+            0.5243640043772757,
+            0.5246729997452348
+          ],
+          "trace_native_ms_samples": [
+            0.030719999223947525,
+            0.02969600073993206,
+            0.03174399957060814
+          ],
+          "trace_wall_ms_median": 0.5246729997452348,
+          "trace_native_ms_median": 0.030719999223947525,
+          "trace_million_rays_per_second_wall": 38.11898079320146,
+          "native_query_counts": {},
+          "id_mismatches": 0,
+          "distance_mismatches": 0,
+          "max_matching_hit_distance_error": 0.0,
+          "status": "ok",
+          "native_trace_timing_scope": "device launch only",
+          "native_build_timing_scope": "device acceleration structure build only",
+          "speedup_vs_brute_wall": 69.43249036603653
+        }
+      },
+      "reference_hits": 9005
+    }
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,42 @@
+ + COMPILE UNIVERSE                                                                       [find /] [? help] [quit q]    
+jzjzzYizYxixtJJtJJJtLrLL+rrr+++!+!;~;~:                                              ,:                                 
+zjzzziizxxYxiiiJtJJJ+,Lkt!rr+++;!!!;~~:,.                                                                               
+zzxYxJizxiJJtJJzitrLLrLirrrrrr+;;+!;.  ,,                                                                               
+zzziiYizYYzxiiYzJttLLrLLrLr+r+!!*;!!~  .,                                                                               
+zjzzYYzjzxxiJJixJJtLrLrLrLL!*++!;~*+: ,                                                                                 
+zjzzYxxiJtJtttLJtLLLrLLrLr+!+!+;:!!!~;~                                                                                 
+jzzxiJJJtJJJttrLtLLLLrLrLr+L+!!;;**;;~~,.                                                                               
+zjYJiJtttJJtJtLLLrLLrLrLrLrrL!;;;*;~!;                                                                                  
+YzYxJJJLJtJttJLLrLrrrrLr+rLr+!;;;*;!!*,                                                                                 
+zxxiJttLtttJiiLLLrLrLrrrrLrL~!!!;~;*!;:                                   ,r;                                           
+ziJJJJtLLLrtxxLrLrrrrLrrrrr+!!+!!;;~;~ ,,                                  Lr                                           
+xxJJtttLLLLxztLtr+rLrrrrLrr++!!!!*;;~;;,                                   ~,                                           
+xixJJttLLLLiJtLLrrLrLrrrL!r+!+!!!*;;;~~,                                                                                
+JJitJJtLLLrLtJLLLrLrr++r++++!!+!!**~~..                                                                                 
+xJiitJLLLLLrLLLrLLLLr+!++++++!+!!*;;~~,,                                                                                
+zJxixttLLrLLLLLLrLrrL++++r+!++!+!*;;~~~,,                                                                               
+xittJJtJLLrLrLLrLrLrrr+r++++!+!!+*;~;~:.,                    +!                                                         
+xitJtttLLLLLLrLrrLrLrrrr+++++!+!!;;;~;::.                    +J;                                                        
+iJttJttLLrLrLLrLrLrrLrr++!+!++!+!*;;~~~,,                    !!                                                         
+xiJtJLLLLLrLrLrLLrLrrr+!++++++*!+!*;;~~,,                                                                               
+zxJJtJtLrLLLLLLrLrrLrr++++!++!!!!;;~;;~:,, , ,                                                                          
+iJJJJttLLrLrLLLLrLrrrrr++++!+!!!!*;;~~:::~;,                                                                            
+iJJttttJLLLLLLrLLrLrrrr+++!+!+!!!**;;~~~;.                                                                              
+iiJJttLJtLrLLLLrLrrrrrrr++!!+!+!!;*;;;~*~                                                                               
+iJtJtttttLLrLrrLrLrrrr++r++!!!!!!*;;;;~:                                                                                
+zxLzztJtLLLLrLrLrrLrrrr++!++++!*!!!;;~,                                                                                 
+xiiiJxttLtLLLrLrLrLrrL++++++!++!*;*!*~~~.                                                                               
+zxJJtJtJtLLrLrLLrLrLr++++++++!+!++;+!;:,.,         ,.                                                                   
+zzxizJtttLLLLLrLrLrLrr++r++!++!+!!~;+;~.,.                                                                              
+zzYiiJtttLLLrLLrLrLrLr+r++++!+!!+!;~;~~::,.                                                                             
+xYzziJtttLLLtLLrrLrLrrrr++r++!+!!!;;;;.,:,.             ,                                                               
+zxjxixJzJLLLLLLLrLrLLLrrr+++++++!!~;;;;,,,,       +,    ,~                                                              
+zzxziJiJttLLrLLLLrLrLrrr+r++++++!*;;;;;~. .       ,                                                                     
+fjzzxJJJttJtLLLrLrrLrLrr+r+++++!!!;;!*:;, .                                                                             
+ Moon                       +!!+!+;**~.,,,,.                                                                            
+ 2,400 km                   !+!+!!;;;;;~, .,          ,                                                                 
+nzzzzxJJtJJJJtJtLLLLLLrrrrr++!+!+*;~~;;;~,                                                                              
+fnzjzjxJJtJtiizJrtLLLLrrLrr++!!+!!;;;;:~;~:.                                                                            
+ [find /] [map m] [tour t] [orbit/free o] [hold b] [space pause]                                                        
+                                                                                                                        
+ arrows/drag: steer  B: hold/cruise  WS/wheel: zoom                                                       0 fps ORBIT   

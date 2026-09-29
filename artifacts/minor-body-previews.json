@@ -1,0 +1,268 @@
+{
+  "bodyCount": 490,
+  "previews": [
+    {
+      "id": "vesta",
+      "radiusKm": 261.385,
+      "day": {
+        "centerPick": -50,
+        "targetCells": 2360,
+        "meanTargetRGB": 174.87471751412428,
+        "frameMs": 2.779268980026245,
+        "surfaceCells": 2360,
+        "visibleBodies": 1,
+        "cometCells": 0,
+        "glyphHash": 573677
+      },
+      "night": {
+        "centerPick": -50,
+        "targetCells": 2360,
+        "meanTargetRGB": 0.09194915254237288,
+        "frameMs": 2.998659133911133,
+        "surfaceCells": 2360,
+        "visibleBodies": 3,
+        "cometCells": 0,
+        "glyphHash": 444973
+      },
+      "shapeChangedBytes": 9940,
+      "defaultCometView": null
+    },
+    {
+      "id": "pallas",
+      "radiusKm": 256.5,
+      "day": {
+        "centerPick": -51,
+        "targetCells": 2260,
+        "meanTargetRGB": 174.33230088495574,
+        "frameMs": 2.2476389408111572,
+        "surfaceCells": 2260,
+        "visibleBodies": 1,
+        "cometCells": 0,
+        "glyphHash": 573369
+      },
+      "night": {
+        "centerPick": -51,
+        "targetCells": 2260,
+        "meanTargetRGB": 0.137905604719764,
+        "frameMs": 2.4199790954589844,
+        "surfaceCells": 2260,
+        "visibleBodies": 4,
+        "cometCells": 0,
+        "glyphHash": 443374
+      },
+      "shapeChangedBytes": 9849,
+      "defaultCometView": null
+    },
+    {
+      "id": "eros",
+      "radiusKm": 8.42,
+      "day": {
+        "centerPick": -52,
+        "targetCells": 711,
+        "meanTargetRGB": 159.86029067041724,
+        "frameMs": 2.1149990558624268,
+        "surfaceCells": 711,
+        "visibleBodies": 1,
+        "cometCells": 0,
+        "glyphHash": 492814
+      },
+      "night": {
+        "centerPick": -52,
+        "targetCells": 711,
+        "meanTargetRGB": 1.1172058134083451,
+        "frameMs": 2.475998878479004,
+        "surfaceCells": 711,
+        "visibleBodies": 9,
+        "cometCells": 0,
+        "glyphHash": 446498
+      },
+      "shapeChangedBytes": 4767,
+      "defaultCometView": null
+    },
+    {
+      "id": "bennu",
+      "radiusKm": 0.24222,
+      "day": {
+        "centerPick": -53,
+        "targetCells": 2667,
+        "meanTargetRGB": 172.8326459192601,
+        "frameMs": 2.182508945465088,
+        "surfaceCells": 2667,
+        "visibleBodies": 1,
+        "cometCells": 0,
+        "glyphHash": 577901
+      },
+      "night": {
+        "centerPick": -53,
+        "targetCells": 2667,
+        "meanTargetRGB": 0.15810523684539432,
+        "frameMs": 2.347348928451538,
+        "surfaceCells": 2667,
+        "visibleBodies": 1,
+        "cometCells": 0,
+        "glyphHash": 433923
+      },
+      "shapeChangedBytes": 8947,
+      "defaultCometView": null
+    },
+    {
+      "id": "ryugu",
+      "radiusKm": 0.448,
+      "day": {
+        "centerPick": -54,
+        "targetCells": 2976,
+        "meanTargetRGB": 169.6478494623656,
+        "frameMs": 2.826448917388916,
+        "surfaceCells": 2976,
+        "visibleBodies": 2,
+        "cometCells": 0,
+        "glyphHash": 607018
+      },
+      "night": {
+        "centerPick": -54,
+        "targetCells": 2976,
+        "meanTargetRGB": 0.07717293906810035,
+        "frameMs": 2.208648920059204,
+        "surfaceCells": 2976,
+        "visibleBodies": 2,
+        "cometCells": 0,
+        "glyphHash": 433105
+      },
+      "shapeChangedBytes": null,
+      "defaultCometView": null
+    },
+    {
+      "id": "itokawa",
+      "radiusKm": 0.165,
+      "day": {
+        "centerPick": -55,
+        "targetCells": 898,
+        "meanTargetRGB": 175.83259094283594,
+        "frameMs": 2.0532000064849854,
+        "surfaceCells": 898,
+        "visibleBodies": 2,
+        "cometCells": 0,
+        "glyphHash": 490360
+      },
+      "night": {
+        "centerPick": -55,
+        "targetCells": 898,
+        "meanTargetRGB": 0.25092798812175204,
+        "frameMs": 1.967268943786621,
+        "surfaceCells": 898,
+        "visibleBodies": 1,
+        "cometCells": 0,
+        "glyphHash": 437591
+      },
+      "shapeChangedBytes": 6417,
+      "defaultCometView": null
+    },
+    {
+      "id": "halley",
+      "radiusKm": 5.5,
+      "day": {
+        "centerPick": -56,
+        "targetCells": 10917,
+        "meanTargetRGB": 133.65692650606087,
+        "frameMs": 2.311979055404663,
+        "surfaceCells": 10917,
+        "visibleBodies": 1,
+        "cometCells": 40,
+        "glyphHash": 1142499
+      },
+      "night": {
+        "centerPick": -56,
+        "targetCells": 10888,
+        "meanTargetRGB": 117.75817413666422,
+        "frameMs": 2.8475189208984375,
+        "surfaceCells": 10888,
+        "visibleBodies": 6,
+        "cometCells": 11,
+        "glyphHash": 1086635
+      },
+      "shapeChangedBytes": 65816,
+      "defaultCometView": {
+        "centerPick": -56,
+        "targetCells": 182,
+        "meanTargetRGB": 117.42124542124542,
+        "frameMs": 1.595399022102356,
+        "surfaceCells": 180,
+        "visibleBodies": 1,
+        "cometCells": 124,
+        "glyphHash": 450391
+      }
+    },
+    {
+      "id": "67p",
+      "radiusKm": 1.7,
+      "day": {
+        "centerPick": -57,
+        "targetCells": 12800,
+        "meanTargetRGB": 141.37190104166666,
+        "frameMs": 2.643299102783203,
+        "surfaceCells": 12800,
+        "visibleBodies": 1,
+        "cometCells": 0,
+        "glyphHash": 1229870
+      },
+      "night": {
+        "centerPick": -57,
+        "targetCells": 12800,
+        "meanTargetRGB": 101.00416666666666,
+        "frameMs": 2.6897289752960205,
+        "surfaceCells": 12800,
+        "visibleBodies": 3,
+        "cometCells": 0,
+        "glyphHash": 1071056
+      },
+      "shapeChangedBytes": null,
+      "defaultCometView": {
+        "centerPick": -57,
+        "targetCells": 231,
+        "meanTargetRGB": 113.93217893217893,
+        "frameMs": 1.7785789966583252,
+        "surfaceCells": 231,
+        "visibleBodies": 2,
+        "cometCells": 171,
+        "glyphHash": 457618
+      }
+    },
+    {
+      "id": "phobos",
+      "radiusKm": 11.08,
+      "day": {
+        "centerPick": -1401,
+        "targetCells": 1663,
+        "meanTargetRGB": 165.39707356183604,
+        "frameMs": 2.08151912689209,
+        "surfaceCells": 1663,
+        "visibleBodies": 6,
+        "cometCells": 0,
+        "glyphHash": 535939
+      },
+      "night": {
+        "centerPick": -1401,
+        "targetCells": 1663,
+        "meanTargetRGB": 0.6221687712968531,
+        "frameMs": 1.9592089653015137,
+        "surfaceCells": 1663,
+        "visibleBodies": 2,
+        "cometCells": 0,
+        "glyphHash": 434832
+      },
+      "shapeChangedBytes": 9220,
+      "defaultCometView": null
+    }
+  ],
+  "phobosBehindMars": {
+    "centerPick": -5,
+    "targetCells": 0,
+    "meanTargetRGB": 0.0,
+    "frameMs": 3.216499090194702,
+    "surfaceCells": 340,
+    "visibleBodies": 2,
+    "cometCells": 0,
+    "glyphHash": 456888
+  },
+  "passed": true
+}

@@ -1,0 +1,14 @@
+{
+  "startUtcMs": 946684800000,
+  "stepMs": 86400000,
+  "count": 18629,
+  "components": 6,
+  "url": "/artifacts/earth-orientation.bin",
+  "bytes": 447096,
+  "sha256": "ce155c44b683630a4af3a5948fc727d30845c18752c0b6de55ba69d2c18cdf3e",
+  "model": "IAU 2006 precession / IAU 2000A nutation, ERFA c2i06a",
+  "source": "https://www.iausofa.org/cookbooks",
+  "erfaVersion": "2.0.1.5",
+  "format": "Daily float32 CIO x-axis then celestial north pole, in ICRS/GCRS axes",
+  "limitations": "UTC approximates UT1; no live Earth-orientation bulletin or polar motion. TT-UTC approximated as 69.184 seconds. Planet centers and sunlight geometry retain the fixed J2000 scene epoch."
+}

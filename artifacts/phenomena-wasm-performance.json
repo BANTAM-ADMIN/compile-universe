@@ -1,0 +1,51 @@
+{
+  "description": "Actual Node CPU/WASM local-phenomenon engine timings at changing camera/time; 5 warmup frames followed by 60 measured frames per scene. These are not unified-worker costs, browser FPS, or low-end hardware measurements.",
+  "node": "v22.23.2",
+  "cols": 220,
+  "rows": 94,
+  "heap_bytes": 16777216,
+  "scenes": [
+    {
+      "scene": 0,
+      "name": "VFTS 352",
+      "median_ms": 2.3923919200897217,
+      "p95_ms": 2.6809940338134766,
+      "field_samples": 0
+    },
+    {
+      "scene": 1,
+      "name": "Betelgeuse",
+      "median_ms": 2.674423933029175,
+      "p95_ms": 2.866384983062744,
+      "field_samples": 0
+    },
+    {
+      "scene": 2,
+      "name": "Crab Nebula",
+      "median_ms": 9.95096206665039,
+      "p95_ms": 10.780216217041016,
+      "field_samples": 206343
+    },
+    {
+      "scene": 3,
+      "name": "Orion Nebula",
+      "median_ms": 10.453104019165039,
+      "p95_ms": 11.428589820861816,
+      "field_samples": 214503
+    },
+    {
+      "scene": 4,
+      "name": "Crab Pulsar",
+      "median_ms": 1.9927910566329956,
+      "p95_ms": 2.097460985183716,
+      "field_samples": 0
+    },
+    {
+      "scene": 5,
+      "name": "3C 273",
+      "median_ms": 1.842519998550415,
+      "p95_ms": 1.9010189771652222,
+      "field_samples": 0
+    }
+  ]
+}

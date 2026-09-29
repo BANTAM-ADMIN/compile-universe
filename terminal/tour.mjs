@@ -1,0 +1,22 @@
+// Same destinations, timing and story as the browser Grand Tour.
+export const tourStops = [
+  {id:'earth',title:'A world that glows',view:'night',hold:12,sweep:.32,caption:'The night side of home. NASA’s 2016 Black Marble traces observed lights across the continents.'},
+  {id:'moon',title:'Across the quiet sea',hold:8,sweep:.25,caption:'Drop close over the day-night boundary, then cruise into sunlight across ancient impact basins and highlands mapped by NASA.'},
+  {id:'saturn',title:'A planet wearing sunlight',hold:12,sweep:.38,caption:'The main C, B and A rings, at their published radial bounds. Ice, gaps and a vast, banded world.'},
+  {id:'67p',title:'A small world, a long shadow',hold:9,sweep:.35,caption:'Comet 67P: a cataloged destination with an imagined active coma and a tail swept away from the Sun.'},
+  {id:'betelgeuse-study',title:'The restless giant',hold:12,sweep:.3,caption:'A photosphere larger than your view. Scroll out to find its edge. The boiling surface illustrates convection, not an imminent explosion.'},
+  {id:'vfts-352',title:'Two suns, one embrace',hold:12,sweep:.35,caption:'A real overcontact binary in the Large Magellanic Cloud. Its surrounding stars have observed Gaia sky positions; their depths are reconstructed.'},
+  {id:'crab-pulsar',title:'The heart of an explosion',hold:12,sweep:.22,caption:'A compact stellar remnant inside the Crab Nebula. The rotating beams and glowing remnant are illustrative views of a real pulsar.'},
+  {id:'orion-nebula',title:'Where new stars begin',hold:12,sweep:.28,caption:'A stellar nursery in Orion. Fly through an interpreted emission field anchored to the observed nebula’s location.'},
+  {id:'sagittarius-a',title:'The center holds',hold:18,sweep:.4,caption:'The Milky Way’s central black hole. Compiled Schwarzschild optics bend the surrounding Galactic light around an illustrative accretion disk.'},
+  {id:'mars',title:'The red frontier',hold:10,sweep:.3,caption:'Rust-colored Mars, with a compiled NASA surface map. Olympus Mons and Valles Marineris mark a world shaped by volcanoes and ancient water.'},
+  {id:'jupiter',title:'Storms on a giant',hold:12,sweep:.38,caption:'Jupiter’s broad cloud bands and Great Red Spot, shown with an authored surface illustration inspired by the planet’s observed storms.'},
+  {id:'io',title:'A moon remade by fire',hold:9,sweep:.3,caption:'Io is the Solar System’s most volcanically active world. Its mottled surface here is an illustration of a moon continually resurfaced by eruptions.'},
+  {id:'europa',title:'The ocean beneath the ice',hold:9,sweep:.28,caption:'Europa’s cracked ice conceals a global ocean. The surface pattern is illustrative; the fractures and ocean are grounded in spacecraft evidence.'},
+  {id:'titan',title:'Rain on another world',hold:10,sweep:.3,caption:'Titan’s thick orange haze hides rivers, lakes and seas of liquid methane and ethane. This closeup illustrates the atmosphere, not a mapped shoreline.'},
+  {id:'enceladus',title:'The moon that sprays a sea',hold:9,sweep:.28,caption:'Enceladus vents water ice and vapor from its south pole, revealing an ocean beneath the crust. Its icy surface here is illustrative.'},
+  {id:'neptune',title:'Blue at the edge',hold:11,sweep:.34,caption:'Neptune’s methane-tinted atmosphere hosts some of the Solar System’s fastest winds. The blue bands are an authored illustration.'},
+  {id:'pluto',title:'A heart in the dark',hold:9,sweep:.28,caption:'New Horizons revealed Pluto’s bright, heart-shaped Tombaugh Regio. This distant dwarf world’s displayed surface is illustrative.'},
+  {id:'crab-nebula',title:'The scattered star',hold:12,sweep:.3,caption:'The Crab Nebula is the expanding remnant of a supernova seen in 1054. Fly through an authored field of glowing filaments at its observed location.'},
+  {id:'3c-273',title:'A beacon across time',hold:15,sweep:.3,caption:'3C 273 is a quasar with an observed jet, about 2.5 billion light-years away. Its disk and jet are a conceptual closeup with compressed scales.'},
+];

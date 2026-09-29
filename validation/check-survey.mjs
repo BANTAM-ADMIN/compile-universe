@@ -1,0 +1,11 @@
+import {chromium} from 'playwright';import assert from 'node:assert/strict';
+const browser=await chromium.launch({headless:true,args:['--no-sandbox']}),page=await browser.newPage({viewport:{width:1440,height:1000}});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+await page.goto('http://127.0.0.1:8768');await page.waitForFunction(()=>window.__atlas?.ready,null,{timeout:60000});await page.waitForTimeout(1500);
+console.log('Earth',await page.evaluate(()=>({stats:__atlas.data.stats,frames:__atlas.metrics.frames,mean:__atlas.metrics.computeTimes.reduce((a,b)=>a+b,0)/__atlas.metrics.computeTimes.length})));
+await page.evaluate(()=>__atlas.beginJourney('large-magellanic-cloud',{instant:true}));await page.waitForTimeout(2000);await page.screenshot({path:'validation/lmc-overview.png'});console.log('LMC',await page.evaluate(()=>({stats:__atlas.data.stats,pos:__atlas.state.position})));
+await page.evaluate(()=>{__atlas.state.surveyMode=2;__atlas.setPaused(true)});await page.waitForTimeout(1000);assert.equal(await page.evaluate(()=>__atlas.data.stats.survey_mode),2);await page.screenshot({path:'validation/lmc-survey-only.png'});
+await page.evaluate(()=>{__atlas.state.surveyMode=1;__atlas.setPaused(false);return __atlas.beginJourney('vfts-352')});await page.waitForFunction(()=>!__atlas.travel,null,{timeout:30000});await page.waitForTimeout(1000);await page.screenshot({path:'validation/vfts-gaia.png'});console.log('VFTS',await page.evaluate(()=>__atlas.data.stats));
+const results=[];for(const name of ['Proxima Centauri','Sun','Rigel','Betelgeuse']){
+ await page.evaluate(name=>__atlas.beginJourney(__atlas.catalog.stars.find(s=>s.name===name),{instant:true}),name);await page.waitForTimeout(500);
+ const result=await page.evaluate(()=>({name:__atlas.selected.name,solar:__atlas.selected.radius_pc/2.25461e-8,distanceR:Math.hypot(...__atlas.state.position.map((x,i)=>x-__atlas.selected.position[i]))/__atlas.selected.radius_pc,surface:__atlas.data.stats.surface_cells,cols:__atlas.state.cols,rows:__atlas.state.rows}));results.push(result);await page.screenshot({path:'validation/star-'+name.replaceAll(' ','-')+'.png'});
+}console.log('Stars',results);assert.ok(results[0].distanceR>10);assert.ok(results[1].distanceR>4);assert.ok(results[2].distanceR<1.3);assert.ok(results[3].distanceR<1.3);assert.deepEqual(errors,[]);await browser.close();

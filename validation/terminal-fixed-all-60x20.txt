@@ -1,0 +1,20 @@
+ + COMPILE UNIVERSE           [find /] [? help] [quit q]    
+                                                            
+ Sun / ALL BODIES                            [close / esc]  
+ Fixed positions / click a world  1.00x   [-] [+] [fit 0]   
+       ..        [Makemake]                                 
+                           //----  [Eris]                   
+                       [Sun]|o@-|o  ..                      
+                          .\o-oo[Mercury]                   
+               ...  [Neptune]---//                          
+      ..                      [Haumea]                      
+                                                            
+ +- SYSTEM / CLICK TO FLY --------------------------------+ 
+ | [planets] [inner] [all] [moons <] [moons >] [find /]   | 
+ |                                                        | 
+ | > [Sun]                      [Mercury]                 | 
+ |   [Venus]                    [Earth]                   | 
+ | 1-4/22  arrows: select / Enter: fly      [<] [>]       | 
+ +--------------------------------------------------------+ 
+            ...                                             
+ wheel +/-: zoom / 0: fit / arrows: select /  0 fps MAP     

@@ -1,0 +1,42 @@
+ + COMPILE UNIVERSE                                                                       [find /] [? help] [quit q]    
+*.    ###.       *#.         *+   .. ##.  .       ..            ....:::##*  :##     .*::  .:    +#*+:   *#.##*          
+:    *###                     ::*+*+*       .:.      .....   ......     .:*:             .       *#:     ##.++          
+#::.++       .          #+  . .*.        .:    ..:#####*      ..:.:### ..   .:*           .:       ...                  
+ ::**#+  *++       .. ###              .    .####:.:*:        *####* .:.   .   .:.           .#*   ....       ..        
++  .::  ::*  .:  .: +*#   .              .###        ##       .++.         .. .    .          +#*    .:                 
+#..+:   .   :+  .: ##.  .*             :+ #:    #   :        ..  #+*   *#**+..: ..             ##. :   .   +*           
+  :*   ::     .   *:   .+* :         : ##.# *.    : #   +*:..* #+  .:*:.  .#*+#.:..      .      :+  :       **.  .      
+             +#        #+ +        : ##*## .  .  . . ::rnCLt*tf*x#:    ..    +::#..       .             *    ..         
+ *   #+     .+       ##+.+       .. #:##+#:.  .+ +n*xzOUY#YLJUjOYQtznx*  :  .   #+.  .     ..        ## *+            . 
+##..###*+   *.      ##+.+       : .+ +  .     +nrQ0C#Qo0m0JzjJdXQaqOYpOn+n .  +   .+        ..        ##       *.#*   ##
+# .:.##*#+         *+*         :    .       xtCYt0LLmbwQt&d&&#8Jmd8kQOdfmjLC!       :   .     +       .#.      *+##.  *#
+  ..   ## .       :*          .     . .:  zrJLUZtQqtQhkw#%MddMBBkoWkZhh0pOJOfj#.:.       .    .#      .**         :     
+:     .:  .       .          .      .**+*xYjJYtwO0#wpQqtx#+ ##:+Zha&WWbak0bYLLrr  :#           #+   .  +                
+: . +#*:       #:      .              .rCYYQjwUqQqjm:  ##. .::     +hh&B&db#k+Jjz* ##           # .  . *:               
+ .:*#*. :.    :#                     *iJtnJfUJmtdX  :#t          O#.  a%%hBo0QUZm*n  ..         +# *     .*         ++ .
+.+###   *                     .     nxLjJJqCZd#w#*#*                  #O8@@Bh#pw#0tj~ * .       +# *      :         :+  
+:##+. :+         :              .+nnxttwJdOmm0m                         x%B&MkWQaC#Qfz:         +: ::            .      
++## : :*     .   *          :+:~rCJCYZUChUkJXU!                        : J8@#B&Mmh0#kmCJn#       # ...          **      
+:+ .*. :. ..#.   *  i~+~znnC+C*CjYZfCYwfkdC0q+                          ::q$@%#BoBMhbkpQb#pOjLOCt#r+.:         .++    .:
+##~*i*xftCJj#jJ~*zCXJYZtjrUY#UOzx0pYjOYbJmC+    *                      w #++@$%BB%W@W8&BBW#WMawMd#hpmOmmQqZCdXt*0YCXfxi~
+jj##zJJzzXftZJULfxzjjtQqXOYJ#jzpmZYYpmqUJbwZZd0zQdOtZJx++~  !iixLfmaBWmB@@@M@%k@@B@Bk@%8&W%bhWWWq#8oqQdhoddkhkXJXZ0p0XXZ
+zL+#!fCUxxzttxtOJCXYYfxztfjn#fUnXmbXOUYmZOqQOqppOYJ+~*jCXmpdpppdbh##ohq0UamkUOdMWh#qo#WkbpQdwhadO#QwqJYCXdqmZdkwmLZYZqQO
+zLjCUn+#z+rr:x*+nn*++jxtLrnz+rzfJUUtY0Q00mwmm0XYYYXZYLfjjjzzzzjfLJUYXXYUUkkmQmw+#0mmOXOwwO0mmZXmmmbq00mXCJLLZLfJjJCfJfYY
+i~++rrj**#+CLjnjfffj#tfzzjfx**xj*~~*xzffzxjLUXJttLLLLLttffffffffttLCCUJCq0QQZYOXZYJJUYOOZYCtLCUULttLLJjnxffnxffzLLzzzxr~
+.+##.  !:##+#~~::~~~#i!; ;;!i~+r+**+***rrrzxfUXCfzzjjjjjzzzxxxxxxzzzzj*ah0qw0Yz+r+nnxxzxnnrrnxzxn*rxxLxn+n:+**+~!!!i~~i~
+.*+ ..## **+#   :    *  :;;;; # .. #!!.!;;*fzfqqUC*.    !iiiii!! i#:*UdbMhYtCx~*:i*!!:   .       :     ++.   :#     ..  
+      :#  ::**   :             #    #. :.  rCUXhwQpYf +  .*# :   + haW&WawUYj+#+     #  .    .        *#     ##  :.     
+      ##  +  *   :*             :    : . #  rCLQfpOX&Mbwmz+* rJaa#@%ZbMXkZLx      : #+*     .        .#.    :+ *      . 
+      ##  ##      : .                #  ..  . +ffXtbUt#moMpO0b8WaqL0#b#CY~+: .     #.+              . . .     #+::      
+   *: ..   #     .:                   *#  . #  !fJY*mChLdq#UYMdkJwZQx0XU! #*:  #    :      .                  * *.   .* 
+    . .*     .: #.#+         .     .    .        #:xzLL*xOZttZ0xJX+zt~ .  : +            ..                          :* 
+     ..:: .*  *:##*#+.                      :   # #  + ~r#L+zLzr~   # :     +.:.        .                  *   . .      
+::*## .    ..:   :# +#.    *    .          :* .++.:   * .+ :#    .**:       .*         :  *   . . . :     ##  ##*:    ##
+ .*##..:  .  *+    .:.:     +:                 *+:+ .+   **.      + ##  :  #.        :. #+     .  *+ :*  *## +# . .  *##
+ Sagittarius A*             :*+.  .     .    +..    ..            *+ .         .   .: ##* #      .*..*.+*.#* :  *#+ .## 
+ PHENOMENON / 2.04 AU        ++*++ ..     .*.  .#####                 .:    :    :: ##+*##+      :#. *++:   *:  ::   *  
+ .:+#+*.*: *:     :. ..       :#*:##.::  .   .**+#.                     .:    .:# ##*+####      +#  ...#* .:    ##...   
+ . .+##: *   .:       .. .      **.+##..:.  ..   ..:.*####+.       ..     ..+##:#*.#####  #*          : :*.    *#+ ::   
+ [find /] [map m] [tour t] [orbit/free o] [hold b] [space pause]                                                        
+                                                                                                                        
+ arrows/drag: steer  B: hold/cruise  WS/wheel: zoom                                                       0 fps ORBIT   

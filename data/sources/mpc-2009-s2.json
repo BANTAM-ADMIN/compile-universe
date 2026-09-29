@@ -1,0 +1,7 @@
+{
+  "name": "S/2009 S2",
+  "orbitalRadiusKm": 117059,
+  "source": "https://minorplanetcenter.net/mpec/K26/K26M19.html",
+  "sourceSha256": "1aef58d176bd5f57197824fc2dcb3b8606aadde729f70d8c65107bc4e4dc183f",
+  "note": "Factual radius extracted from discovery announcement; angular phase unspecified."
+}

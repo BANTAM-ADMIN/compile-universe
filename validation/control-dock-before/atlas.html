@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#030608">
+  <meta name="color-scheme" content="dark">
+  <title>Gaia · Earth → The Stars · Compile Universe</title>
+  <link rel="stylesheet" href="/atlas.css">
+</head>
+<body>
+<main id="atlas" class="atlas">
+  <div id="viewport" class="viewport" tabindex="0" role="region" aria-label="An interactive universe atlas. Drag to orbit, choose a world on the system map, or begin a journey.">
+    <canvas id="glyphscreen" aria-label="Live character display of Earth and the real star catalog"></canvas>
+    <pre id="textscreen" aria-label="Selectable universe character grid" hidden></pre>
+    <div id="labels" class="labels" aria-label="Named stars in this view"></div>
+  </div>
+  <div class="vignette" aria-hidden="true"></div>
+  <header class="header">
+    <div class="brand"><span class="brand-symbol" aria-hidden="true">✧</span><span>COMPILE UNIVERSE<small>GAIA EXPERIMENT</small></span></div>
+    <span class="live-label"><span aria-hidden="true"></span> A REAL SKY, WRITTEN IN LIGHT</span>
+    <div class="header-actions">
+      <button id="search-open" class="quiet-button" aria-controls="panel" aria-expanded="false"><span aria-hidden="true">⌕</span> <span class="search-word">Find a star</span></button>
+      <button id="phenomena-open" class="blackhole-link phenomena-link">Phenomena <span aria-hidden="true">↗</span></button>
+      <button id="blackhole-open" class="blackhole-link">Sagittarius A* <span aria-hidden="true">↗</span></button>
+      <button id="info-open" class="icon-button" aria-label="Open observatory settings and information" aria-controls="panel" aria-expanded="false" title="Observatory and controls (?)">☷</button>
+    </div>
+  </header>
+
+  <div id="loading" class="loading"><div aria-hidden="true">✧</div><p>OPENING THE ATLAS</p><small id="loading-message">Finding our place among the stars.</small></div>
+  <div id="error" class="error" role="status" aria-live="polite" hidden><span id="error-message"></span><button id="retry">Try again</button></div>
+
+  <div id="preparing" class="preparing" role="status" aria-live="polite" hidden><span id="preparing-message">Preparing destination…</span><button id="cancel-preparing">Cancel</button></div>
+
+  <section class="identity" aria-label="Selected destination">
+    <p id="object-kicker" class="eyebrow">01 / YOU ARE HERE</p>
+    <h1 id="object-title">Earth</h1>
+    <p id="object-description" class="description">Every journey starts somewhere.<br><span>This one starts at home.</span></p>
+    <div id="object-facts" class="object-facts">SOLAR SYSTEM <span>·</span> OUR PALE BLUE DOT</div>
+    <div class="object-actions"><button id="inspect-selected">Inspect Earth</button><button id="explore-system">Explore this system <span aria-hidden="true">↗</span></button><button id="night-side">Earth at night ↗</button></div>
+    <button id="tour-open" class="tour-launch"><span aria-hidden="true">✧</span> Take the Grand Tour <span aria-hidden="true">→</span></button>
+  </section>
+
+  <aside class="distance-readout" aria-label="Distance to selected object">
+    <span id="distance-label">ABOVE THE SURFACE</span>
+    <strong id="distance-value">—</strong>
+    <span id="distance-unit">KILOMETERS</span>
+    <small id="navigation-mode">ORBITING EARTH</small>
+  </aside>
+
+  <section id="journey" class="journey" aria-label="Journey progress" hidden>
+    <div class="journey-top"><span id="journey-stage">LEAVING HOME</span><button id="cancel-journey">Stop here <span aria-hidden="true">×</span></button></div>
+    <div class="journey-line"><span id="journey-from">Earth</span><span id="journey-to">Alpha Centauri</span></div>
+    <div class="journey-track"><span id="journey-progress"></span></div>
+    <div class="journey-phases" aria-hidden="true"><span id="phase-departure">DEPART</span><span id="phase-cruise">CROSS</span><span id="phase-approach">APPROACH</span></div>
+    <p id="journey-detail">A continuous journey through measured space.</p>
+  </section>
+
+  <div id="resume-card" class="resume-card" hidden><span id="resume-label">Your journey is on hold.</span><button id="resume-journey">Resume <span aria-hidden="true">→</span></button><button id="dismiss-resume" aria-label="Dismiss interrupted journey">×</button></div>
+  <section id="tour-card" class="tour-card" aria-label="Grand Tour controls" hidden>
+    <div class="tour-top"><span id="tour-chapter">GRAND TOUR</span><span id="tour-state">IN FLIGHT</span></div>
+    <h2 id="tour-title">From home to the impossible</h2><p id="tour-caption"></p>
+    <div class="tour-progress" aria-hidden="true"><span id="tour-progress"></span></div>
+    <div class="tour-controls"><button id="tour-pause" aria-pressed="false">Pause tour</button><button id="tour-next">Next stop →</button><button id="tour-stop">Take control</button></div>
+  </section>
+  <div class="bottom-controls">
+    <nav class="command-bar" aria-label="Travel and camera controls">
+      <button id="primary-journey" class="journey-button"><span aria-hidden="true">↗</span><span id="primary-journey-label">Journey to Alpha Centauri</span></button>
+      <button id="destinations" class="command-button">Explore</button><button id="system-map-open" class="command-button" title="Open system map (M)">Map</button>
+      <span class="divider" aria-hidden="true"></span>
+      <button id="mode-toggle" class="command-button" aria-pressed="false" title="Switch between orbit and free flight (O)"><span id="mode-button-label">Orbit</span></button>
+      <button id="look-sun" class="command-button sun-button" title="Look back at the Sun (L)" aria-label="Look back at the Sun">☉<span class="desktop-label"> Sun</span></button>
+      <button id="pause" class="command-button pause-button" aria-label="Pause scene time" aria-pressed="false" title="Pause scene time (Space)">Ⅱ</button>
+    </nav>
+    <div class="footer"><span id="navigation-hint">DRAG TO ORBIT · SCROLL TO APPROACH</span><span class="footer-right"><span id="speed-readout">A REAL, NAVIGABLE SKY</span><span id="grid-readout">LIVE CHARACTERS</span><span id="fps-readout">— FPS</span><button id="help-footer" aria-label="Keyboard help">? HELP</button></span></div>
+  </div>
+
+  <aside id="panel" class="panel" aria-label="Destinations and observatory" hidden>
+    <div class="panel-header"><div class="panel-tabs"><button id="tab-destinations" aria-selected="true">Destinations</button><button id="tab-observatory" aria-selected="false">Observatory</button></div><button id="close-panel" class="icon-button" aria-label="Close panel">×</button></div>
+    <div id="destinations-panel">
+      <label for="star-search" class="sr-only">Search catalog stars by name or identifier</label>
+      <input id="star-search" class="search-input" type="search" placeholder="A planet, a moon, a distant sun…" autocomplete="off" spellcheck="false">
+      <p id="destinations-count" class="destinations-count">A universe of places to go.</p>
+      <button id="phenomena-feature" class="phenomena-feature"><span>PHENOMENA OBSERVATORY</span><strong>Contact binaries. Stellar fire. The Crab. <b aria-hidden="true">↗</b></strong><small>Real destinations. The same universe, the same journey.</small></button>
+      <nav class="destination-categories" aria-label="Destination categories"><button data-category="solar" aria-pressed="true">Solar System</button><button data-category="systems" aria-pressed="false">Star Systems</button><button data-category="wonders" aria-pressed="false">Stars</button><button data-category="phenomena" aria-pressed="false">Phenomena</button></nav>
+      <div id="system-cards" class="system-cards"></div>
+      <div id="quick-destinations" class="quick-destinations"></div>
+      <section id="target-card" class="target-card" aria-label="Destination details" hidden>
+        <div class="target-card-top"><span id="target-kind">WORLD</span><span id="target-data-class">ILLUSTRATIVE SURFACE</span></div>
+        <h2 id="target-name">Earth</h2><p id="target-description"></p><div id="target-facts" class="target-facts"></div>
+        <div class="target-actions"><button id="fly-preview">Fly to destination <span aria-hidden="true">↗</span></button><button id="inspect-preview">Inspect</button><button id="map-preview">Map</button></div>
+        <div id="target-view-options" class="target-view-options" hidden><span>ARRIVAL VIEW</span><button data-arrival-view="day" aria-pressed="true">Sunlit</button><button data-arrival-view="limb" aria-pressed="false">Terminator</button><button data-arrival-view="night" hidden>Night lights</button><button data-arrival-view="system" aria-pressed="false">In context</button></div>
+      </section>
+      <p id="search-caption" class="panel-caption">PLACES TO BEGIN</p>
+      <div id="search-results" class="search-results" aria-live="polite"></div>
+      <p class="panel-note">Choose a world to see its story, then fly there. Search also reaches every named star and the nearby or bright catalog subset.</p>
+    </div>
+    <div id="observatory-panel" hidden>
+      <label class="setting"><span>Star field</span><select id="survey-mode"><option value="1">Hybrid · Gaia + wider galaxy</option><option value="2">Survey stars · Gaia + HYG</option><option value="0">Original look · HYG + wider galaxy</option></select></label>
+      <p id="survey-status" class="provenance">Gaia adds measured nearby stars and Magellanic Cloud candidates. Cloud depths are reconstructed; the wider Milky Way remains illustrative.</p>
+      <label class="setting"><span>Text density</span><select id="density"><option value="adaptive">Adaptive · smooth motion</option><option value="160,70">160 × 70</option><option value="220,94">220 × 94</option><option value="280,118">280 × 118</option></select></label>
+      <label class="setting"><span>Exposure <output id="exposure-value">1.0×</output></span><input id="exposure" type="range" min="0.4" max="3" step="0.1" value="1"></label>
+      <label class="setting"><span>Character display</span><select id="display-mode"><option value="accelerated">Accelerated glyphs</option><option value="text">Selectable text · 15 fps</option></select></label>
+      <label class="check-setting">Names in the sky <input id="show-labels" type="checkbox" checked></label>
+      <label class="check-setting">Pause scene animation <input id="pause-setting" type="checkbox"></label><p class="setting-note">Your camera and journeys keep moving when scene time is paused.</p>
+      <div class="paired-buttons"><button id="fullscreen">Fullscreen</button><button id="reset-earth">Return to Earth</button></div>
+      <h2>Take this view with you</h2>
+      <div class="paired-buttons"><button id="save-text">Save text</button><button id="save-ansi">Save ANSI</button></div>
+      <h2>At the controls</h2>
+      <dl class="keyboard-help"><dt>Drag / arrows</dt><dd>Orbit or look around</dd><dt>Wheel / pinch</dt><dd>Distance in orbit; speed in flight</dd><dt>W A S D</dt><dd>Free flight · Shift moves faster</dd><dt>R / V</dt><dd>Rise / descend</dd><dt>O · L · M</dt><dd>Orbit / flight · Sun · system map</dd><dt>Space · Esc</dt><dd>Pause animation · stop the journey</dd><dt>F · / · ?</dt><dd>Fullscreen · find a star · help</dd></dl>
+      <h2>The measured and the imagined</h2>
+      <p id="provenance" class="provenance">Catalog positions and distances are measured. Stellar surfaces and rotation illustrate those objects; they are not photographs.</p>
+      <p id="epoch-note" class="panel-note">Heliocentric catalog coordinates. Earth is positioned at a fixed reference epoch.</p>
+      <p id="license-note" class="panel-note"></p>
+      <div class="metrics"><div><span>Catalog stars</span><strong id="catalog-count">—</strong></div><div><span>Local compute</span><strong id="compute-ms">—</strong></div><div><span>Character display</span><strong id="display-ms">—</strong></div><div><span>Camera distance</span><strong id="camera-distance">—</strong></div></div>
+      <p class="panel-note">Compiled locally. Character display accelerated. No server-generated frames.</p>
+    </div>
+  </aside>
+  <section id="system-map" class="system-map" role="dialog" aria-modal="true" aria-label="Live system overview" hidden>
+    <header class="map-header"><div><p class="eyebrow">CHOOSE YOUR NEXT WORLD</p><h2 id="map-title">The Solar System</h2><p id="map-subtitle">A schematic guide to the places around this star.</p></div><button id="map-close" class="icon-button" aria-label="Close system map">×</button></header>
+    <nav id="map-families" class="map-families" aria-label="Choose the whole system or a family of moons"></nav>
+    <div class="map-body"><div class="map-diagram"><svg id="map-svg" viewBox="0 0 900 720" role="group" aria-label="Live orbit guides. Select a world for flight options."></svg><div class="map-legend"><span><i class="observed"></i> Catalog / confirmed world</span><span><i class="generated"></i> Generated world</span></div></div><aside class="map-destinations"><div id="map-selection" class="map-selection" hidden><strong id="map-selected-name"></strong><p id="map-selected-detail"></p><button id="map-fly">Fly to world ↗</button><button id="map-focus">Explore its moons</button></div><p id="map-list-label" class="panel-caption">SELECT A WORLD</p><label class="map-search-label" for="map-search">Find a world in this system</label><input id="map-search" class="map-search" type="search" autocomplete="off" placeholder="Filter worlds & moons…"><div id="map-body-list"></div><button id="map-more" class="map-more" hidden>Show more worlds</button><p id="map-data-note" class="panel-note"></p></aside></div>
+    <footer class="map-footer"><span>LIVE CAMERA · POSITIONS TO SCALE · CIRCULAR DISTANCE GUIDES</span><span id="map-count"></span></footer>
+  </section>
+</main>
+<script type="module" src="/atlas.js"></script>
+</body>
+</html>

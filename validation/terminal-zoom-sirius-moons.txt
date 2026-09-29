@@ -1,0 +1,26 @@
+ + COMPILE UNIVERSE                                                                                                     [find /] [? help] [quit q]    
+                                                                                                                                                      
+ Sirius III / MOON FAMILY                                                                                                              [close / esc]  
+ Fixed positions / click a world to fly                                                                                     2.00x   [-] [+] [fit 0]   
+                                                               /                       \                                                              
+                                             .                /                         \     .                       Sirius III                      
+                                                             |/                          \                                                            
+                                          .                  |                           |                            SYSTEM CENTER                   
+                                                            |                             |                                                           
+                                                            |                             |                           @ selected / o world            
+                                         .                  |              @ [Sirius III] |                                                           
+                                                            |                            ||                           Enter or click to fly           
+                                                             \                           |.                           Inner view: close orbits        
+                                      .                      \o [Sirius III-a]          /                                                             
+                                      .                        \                       /.                                                             
+                                      .                         \                     /                                                               
+                                                                                                                                                      
+ +- SYSTEM / CLICK TO FLY --------------------------------------------------------------------------------------------------------------------------+ 
+ | [planets] [inner] [all] [moons <] [moons >] [find /]                                                                                             | 
+ |                                                                                                                                                  | 
+ | > [Sirius III]                [Sirius III-a]                                                                                                     | 
+ |                                                                                                                                                  | 
+ | 1-2/2  generated / arrows: select / Enter: fly                                                                                     [<] [>]       | 
+ +--------------------------------------------------------------------------------------------------------------------------------------------------+ 
+                                                                                                                                                      
+ wheel +/-: zoom / 0: fit / arrows: select / Enter: fly / Esc: return                                                                   0 fps MAP     

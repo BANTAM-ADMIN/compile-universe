@@ -1,0 +1,3 @@
+#!/bin/sh
+# Resolve assets relative to this launcher, including paths containing spaces.
+exec node "$(dirname -- "$0")/terminal/main.mjs" "$@"

@@ -1,0 +1,126 @@
+{
+  "version": 1,
+  "epoch": "J2000.0",
+  "julianDateTDB": 2451545.0,
+  "epochDescription": "2000-01-01 12:00 TDB; positions remain fixed during travel",
+  "frame": "ICRF heliocentric; aligned with catalog J2000 axes to displayed precision",
+  "earth": {
+    "id": "earth",
+    "name": "Earth",
+    "position": [
+      -8.587751953210552e-07,
+      4.30237488630231e-06,
+      1.8652862118770838e-06
+    ],
+    "emission": {
+      "texture": {
+        "url": "/artifacts/earth-night.bin",
+        "width": 1024,
+        "height": 512,
+        "channels": 1,
+        "levels": [
+          {
+            "width": 1024,
+            "height": 512,
+            "offset": 0
+          },
+          {
+            "width": 512,
+            "height": 256,
+            "offset": 524288
+          },
+          {
+            "width": 256,
+            "height": 128,
+            "offset": 655360
+          },
+          {
+            "width": 128,
+            "height": 64,
+            "offset": 688128
+          },
+          {
+            "width": 64,
+            "height": 32,
+            "offset": 696320
+          },
+          {
+            "width": 32,
+            "height": 16,
+            "offset": 698368
+          },
+          {
+            "width": 16,
+            "height": 8,
+            "offset": 698880
+          },
+          {
+            "width": 8,
+            "height": 4,
+            "offset": 699008
+          },
+          {
+            "width": 4,
+            "height": 2,
+            "offset": 699040
+          },
+          {
+            "width": 2,
+            "height": 1,
+            "offset": 699048
+          },
+          {
+            "width": 1,
+            "height": 1,
+            "offset": 699050
+          }
+        ],
+        "bytes": 699051,
+        "sha256": "ac0551052a329fb28b4df792c43459b7482aa5e32f82ddf0508df8aa587a4935",
+        "format": "R8 mip chain, west -180 to east +180, north to south"
+      },
+      "strength": 6.5,
+      "source": {
+        "name": "NASA Black Marble 2016, Suomi NPP VIIRS night lights",
+        "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/imagerecords/144000/144897/BlackMarble_2016_01deg_gray.jpg",
+        "page": "https://science.nasa.gov/earth/earth-observatory/earth-at-night/maps/",
+        "sha256": "4d2158f59123dadf0696a1cf8909c45018a1de8d0daab40da04122a5aa7f27c6",
+        "credit": "NASA Earth Observatory / Joshua Stevens; Suomi NPP VIIRS data from Miguel Roman, NASA GSFC"
+      },
+      "limitations": "2016 composite, not live city activity. Includes observed non-city light sources. Warm tint and display brightness are illustrative; lights fade into daylight. No current weather or outages are simulated."
+    },
+    "positionAU": [
+      -0.1771350992727098,
+      0.887428522325519,
+      0.384742899088207
+    ],
+    "radiusKm": 6371.0084,
+    "radiusPc": 2.0647032075596082e-10,
+    "texture": {
+      "url": "/artifacts/earth.bin",
+      "width": 1024,
+      "height": 512,
+      "channels": 3,
+      "format": "RGB8, row-major, equirectangular, west -180 to east +180, north to south",
+      "sha256": "5a76a3c09ba1049d4256681ebd560c16b360d345e2daa7871c7d6c122b4061c7"
+    },
+    "positionSource": {
+      "name": "NASA/JPL Horizons, DE441",
+      "url": "https://ssd.jpl.nasa.gov/api/horizons.api?format=json&COMMAND=%27399%27&EPHEM_TYPE=%27VECTORS%27&CENTER=%27500%4010%27&TLIST=%272451545.0%27&REF_PLANE=%27FRAME%27&REF_SYSTEM=%27ICRF%27&OUT_UNITS=%27AU-D%27&VEC_TABLE=%272%27&CSV_FORMAT=%27YES%27",
+      "sha256": "3ab38f0cb0b7dd7c6f68dee8c584210d92acf66304067aa7fb4bfec68ff9fbf8"
+    },
+    "radiusSource": "https://ssd.jpl.nasa.gov/planets/phys_par.html",
+    "appearanceSource": {
+      "name": "NASA Blue Marble Next Generation, August 2004, topography; no ocean-floor relief",
+      "url": "https://assets.science.nasa.gov/content/dam/science/esd/eo/images/bmng/bmng-topography/august/world.topo.200408.3x5400x2700.jpg",
+      "sha256": "3dd0e487d9cc0fe5fd85c3912c3782473bd50efd9ac1b5b7edf74b3733ca18b1",
+      "credit": "NASA Earth Observatory; Reto Stockli and Robert Simmon",
+      "usage": "https://www.nasa.gov/nasa-brand-center/images-and-media/"
+    },
+    "orientationSource": {
+      "url": "/artifacts/earth-orientation.json",
+      "model": "IAU 2006 / 2000A, UTC-driven Earth rotation angle"
+    },
+    "limitations": "Spherical mean-radius Earth. Rotation follows the UTC clock; UT1-UTC and polar motion are omitted. The planet center and sunlight geometry retain the fixed J2000 scene epoch. NASA surface maps are downsampled offline; atmosphere, exposure and tint are illustrative, not current weather."
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "bytes": 5174388,
+  "compile_seconds": 1.036,
+  "seed": 20260926,
+  "sky_sources": 17000,
+  "disk": "Periodic density and temperature charts in object coordinates; differential rotation at playback",
+  "sky": "Illustrative distant stars and galactic haze; seven levels of integrated angular detail",
+  "color": "Authored temperature palette; disk brightness and time are illustrative",
+  "source_sha256": "7e7118b2fd693d8056e746241c18f2eab6ad446071cb9e7278bd0d28762845d3",
+  "arrays_sha256": "8e54ceb4ce6f2a0c074e28d837f11504b69bdd55738e2ed0984fefe1c5afdbcc"
+}

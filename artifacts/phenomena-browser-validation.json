@@ -1,0 +1,101 @@
+{
+  "scenes": [
+    {
+      "id": "vfts-352",
+      "grid": [
+        161,
+        56
+      ],
+      "fps": 59.54349983372087,
+      "computeMs": 3.0999999940395355,
+      "cells": 1445
+    },
+    {
+      "id": "betelgeuse-study",
+      "grid": [
+        161,
+        56
+      ],
+      "fps": 60.691719320981456,
+      "computeMs": 5.9000000059604645,
+      "cells": 2830
+    },
+    {
+      "id": "crab-nebula",
+      "grid": [
+        169,
+        59
+      ],
+      "fps": 59.86032590710874,
+      "computeMs": 2.0999999940395355,
+      "cells": 2815
+    },
+    {
+      "id": "orion-nebula",
+      "grid": [
+        178,
+        62
+      ],
+      "fps": 59.73616526946643,
+      "computeMs": 2.5999999940395355,
+      "cells": 3381
+    },
+    {
+      "id": "crab-pulsar",
+      "grid": [
+        178,
+        62
+      ],
+      "fps": 59.85037406483791,
+      "computeMs": 4.299999982118607,
+      "cells": 11957
+    },
+    {
+      "id": "3c-273",
+      "grid": [
+        187,
+        65
+      ],
+      "fps": 59.855349571571395,
+      "computeMs": 3.0999999940395355,
+      "cells": 1278
+    },
+    {
+      "id": "sagittarius-a",
+      "grid": [
+        187,
+        65
+      ],
+      "fps": 59.87525987525988,
+      "computeMs": 5.5999999940395355,
+      "cells": 3582
+    }
+  ],
+  "journeys": [
+    {
+      "id": "vfts-352",
+      "duration": 14,
+      "elapsedSeconds": 13.99190000000596,
+      "fps": 60.034734382009745,
+      "arrivalModelUnits": 5.400002297299923,
+      "approachFrames": 16
+    },
+    {
+      "id": "sagittarius-a",
+      "duration": 14,
+      "elapsedSeconds": 13.935,
+      "fps": 59.921062073914605,
+      "arrivalModelUnits": 24.000000182164978,
+      "approachFrames": 52
+    }
+  ],
+  "offline": true,
+  "serverFrameRequests": 0,
+  "mobile": true,
+  "retry": true,
+  "cancelPreparation": true,
+  "canvas2D": true,
+  "legacyRedirects": true,
+  "errors": [],
+  "passed": true
+}

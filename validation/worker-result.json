@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "recoverablePreloadFailure": true,
+  "worldCamera": true,
+  "sourceRetained": true,
+  "seamlessHandoff": {
+    "glyphChanges": 0,
+    "meanColorChange": 0.00010850694444444444
+  },
+  "scenes": [
+    {
+      "name": "VFTS 352",
+      "frameMs": 3.874966000000029,
+      "cells": 694
+    },
+    {
+      "name": "Betelgeuse",
+      "frameMs": 12.477753000000007,
+      "cells": 885
+    },
+    {
+      "name": "Crab Nebula",
+      "frameMs": 3.9306760000000622,
+      "cells": 1106
+    },
+    {
+      "name": "Orion Nebula",
+      "frameMs": 5.640916999999945,
+      "cells": 1278
+    },
+    {
+      "name": "Crab Pulsar",
+      "frameMs": 6.707424999999944,
+      "cells": 5310
+    },
+    {
+      "name": "3C 273",
+      "frameMs": 1.9091429999999718,
+      "cells": 440
+    },
+    {
+      "name": "Sagittarius A*",
+      "frameMs": 14.180135999999948,
+      "cells": 520
+    }
+  ],
+  "heapBytes": 216334336
+}

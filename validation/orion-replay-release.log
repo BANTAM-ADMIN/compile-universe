@@ -1,0 +1,24 @@
+Aborted()
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+RuntimeError: Aborted(). Build with -sASSERTIONS for more info.
+    at abort (file:///home/deveraux/Desktop/PROJECTAI/universeansi/gcdatlas-main(1)/gcdatlas-main/COMPILEUNIVERSE_GAIA/web/atlas-engine.js:1:2868)
+    at __abort_js (file:///home/deveraux/Desktop/PROJECTAI/universeansi/gcdatlas-main(1)/gcdatlas-main/COMPILEUNIVERSE_GAIA/web/atlas-engine.js:1:5036)
+    at wasm://wasm/00074896:wasm-function[47]:0x5ecb
+    at wasm://wasm/00074896:wasm-function[5]:0x8a6
+    at wasm://wasm/00074896:wasm-function[37]:0x3fac
+    at wasm://wasm/00074896:wasm-function[33]:0x368b
+    at wasm://wasm/00074896:wasm-function[60]:0xa5d8
+    at wasm://wasm/00074896:wasm-function[60]:0xa639
+    at wasm://wasm/00074896:wasm-function[60]:0xa639
+    at wasm://wasm/00074896:wasm-function[60]:0xa639 {
+  type: 'error',
+  id: 2,
+  scope: undefined,
+  destinationIndex: undefined,
+  error: 'Aborted(). Build with -sASSERTIONS for more info.'
+}
+
+Node.js v22.23.2

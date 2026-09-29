@@ -1,0 +1,20 @@
+{
+  "semiaxesKm": [
+    1161.0,
+    852.0,
+    513.0
+  ],
+  "semiaxisUncertaintyKm": [
+    30.0,
+    4.0,
+    16.0
+  ],
+  "poleRaDeg": 285.1,
+  "poleDecDeg": -10.6,
+  "ringRadiusKm": 2287.0,
+  "ringWidthKm": 70.0,
+  "ringOpacity": 0.5,
+  "source": "https://arxiv.org/pdf/2006.03113",
+  "citation": "Ortiz et al. (2017), The size, shape, density and ring of the dwarf planet Haumea from a stellar occultation, Nature 550, 219–223",
+  "note": "Triaxial model inferred from stellar occultation and rotational photometry. These semiaxes assume negligible ring contribution to the photometric amplitude; a larger solution is discussed. Rotation phase and displayed animation remain illustrative."
+}

@@ -1,0 +1,26 @@
+ + COMPILE UNIVERSE                                                                                                     [find /] [? help] [quit q]    
+                                                .                                                                                                     
+ Sun / PLANETARY SYSTEM                                                                                                                [close / esc]  
+ Fixed positions / click a world to fly                                                                                     0.20x   [-] [+] [fit 0]   
+  +- INNER ORBITS ---------------------+     ..                                                                                                       
+  |                                    |    ..                                                                        Sun                             
+  |                 --                 |                                                                                                              
+  |             //--o-[Earth]          |   .                                                                          SYSTEM CENTER                   
+  |            ////-----\\\            |   .                                                                                                          
+  |      [Venus] | |--- \ | [Mars]     |                        [Jupiter]|/o-\                                        @ selected / o world            
+  |            | \o-o@| | o            |                                 \-@o[Sun]                                                                    
+  |      [Mercury]-----[Sun]           | .                        [Uranus]                                            Enter or click to fly           
+  |              -------//             |                                                                              Inner view: close orbits        
+  |                 --                 |                                                                                                              
+  | same positions / enlarged          |                                                                                                              
+  +------------------------------------+                                                                                                              
+                                                                                                                                                      
+ +- SYSTEM / CLICK TO FLY --------------------------------------------------------------------------------------------------------------------------+ 
+ | [planets] [inner] [all] [moons <] [moons >] [find /]                                                                                             | 
+ |                                                                                                                                                  | 
+ | > [Sun]                       [Mercury]                   [Venus]                     [Earth]                     [Mars]                         | 
+ |   [Jupiter]                   [Saturn]                    [Uranus]                    [Neptune]                                                  | 
+ | 1-9/9  arrows: select / Enter: fly                                                                                                 [<] [>]       | 
+ +--------------------------------------------------------------------------------------------------------------------------------------------------+ 
+                              .                                                                                                                       
+ wheel +/-: zoom / 0: fit / arrows: select / Enter: fly / Esc: return                                                                   0 fps MAP     
