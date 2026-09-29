@@ -15,11 +15,11 @@ A navigable atlas of the cosmos rendered in ASCII characters. Fly from Earth to 
 
 The same universe runs in your terminal with ANSI colors:
 
-![Terminal - Earth](artifacts/terminal-earth.png)
-*Earth from orbit in the terminal version*
+![Terminal - Crab Nebula](artifacts/terminal-crab-nebula.png)
+*The Crab Nebula in the terminal version with full ANSI colors*
 
-![Terminal - Solar System](artifacts/terminal-solar.png)
-*The solar system in the terminal version*
+![Terminal - Jupiter](artifacts/terminal-jupiter.png)
+*Jupiter and its moons in the terminal version*
 
 ## Quick Start
 
