@@ -3,3 +3,4 @@ __pycache__/
 artifacts/
 validation/
 .bantam/
+native/build/
