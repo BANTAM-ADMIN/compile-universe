@@ -11,6 +11,16 @@ A navigable atlas of the cosmos rendered in ASCII characters. Fly from Earth to 
 ![Black Hole](artifacts/blackhole-desktop.png)
 *Gravitational lensing around Sagittarius A*
 
+## Terminal Experience
+
+The same universe runs in your terminal with ANSI colors:
+
+![Terminal - Earth](artifacts/terminal-earth.png)
+*Earth from orbit in the terminal version*
+
+![Terminal - Solar System](artifacts/terminal-solar.png)
+*The solar system in the terminal version*
+
 ## Quick Start
 
 ```bash
