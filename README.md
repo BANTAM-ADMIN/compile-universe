@@ -2,15 +2,6 @@
 
 A navigable atlas of the cosmos rendered in ASCII characters. Fly from Earth to quasar 3C 273 through real star data from the Gaia DR3 catalog — 1.5 million stars within 500 light-years, plus the Large Magellanic Cloud. Every view is computed in real time by a WebAssembly scene evaluator; there are no pre-recorded paths or rendered images to convert.
 
-![Earth](artifacts/atlas-earth-desktop.png)
-*Earth viewed from orbit — city lights visible at night*
-
-![Milky Way](artifacts/galaxy-preview.png)
-*The Milky Way galaxy as seen from within*
-
-![Black Hole](artifacts/blackhole-desktop.png)
-*Gravitational lensing around Sagittarius A*
-
 ## Terminal Experience
 
 The same universe runs in your terminal with ANSI colors:
