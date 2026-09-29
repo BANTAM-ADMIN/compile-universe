@@ -1,9 +1,0 @@
-Arrived 0 earth 22.69999998807907 ms
-Arrived 1 moon 12.800000011920929 ms
-Arrived 2 saturn 14.099999994039536 ms
-Arrived 3 67p 11.5 ms
-Arrived 4 betelgeuse-study 18.400000005960464 ms
-Arrived 5 vfts-352 6.0999999940395355 ms
-Arrived 6 crab-pulsar 9.699999988079071 ms
-Arrived 7 orion-nebula 11.599999994039536 ms
-Arrived 8 sagittarius-a 7.600000023841858 ms
