@@ -1,0 +1,11 @@
+{
+  "bytes": 19976844,
+  "sha256": "9e77feb099f136290330477d8ced0d0d21c796117048abf3b300c4fa1a6c1530",
+  "source": "https://github.com/BANTAM-ADMIN/compile-universe",
+  "revision": "6bee836729cace5ff2beb2de9e991763a4049e2f",
+  "edition": {
+    "name": "compact",
+    "stars": 117401,
+    "note": "Compact edition: all 109,401 HYG stars plus 8,000 brightness-selected Gaia observations (4,000 nearby and 4,000 LMC). The full million-star Gaia field is omitted. Moon maps are 512x256; black-hole optical tables and background/disk charts use lower resolution. Other scenes, named destinations and controls are retained. "
+  }
+}
